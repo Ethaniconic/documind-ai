@@ -16,4 +16,9 @@ export const uploadFile = async (file) => {
     return res.data;
 };
 
+export const processDocument = async (document_id) => {
+    const res = await api.post(`/process/${document_id}`);
+    return res.data;
+};
+
 export default api;

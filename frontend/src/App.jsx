@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import UploadBox from "./components/UploadBox";
 import UploadButton from "./components/UploadButton";
 import FileCard from "./components/FileCard";
+import ProcessButton from "./components/ProcessButton";
 
 const App = () => {
   const [file, setFile] = useState(null);
@@ -70,9 +71,12 @@ const App = () => {
           <UploadButton onUpload={handleUpload} loading={loading} disabled={!file} />
         )}
 
-        {/* 5. Green success card */}
+        {/* 5. Green success card + Process button */}
         {uploadedDoc && (
-          <FileCard doc={uploadedDoc} isSuccess={true} onRemove={() => setUploadedDoc(null)} />
+          <>
+            <FileCard doc={uploadedDoc} isSuccess={true} onRemove={() => setUploadedDoc(null)} />
+            <ProcessButton document_id={uploadedDoc.stored_name?.replace(".pdf", "")} />
+          </>
         )}
       </div>
     </div>

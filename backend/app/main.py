@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api import upload
+from app.api import upload, process
 
 app = FastAPI(
     title="DocuMind AI"
@@ -15,6 +15,7 @@ app.add_middleware(
 )
 
 app.include_router(upload.router)
+app.include_router(process.router)
 
 @app.get("/")
 def root():
