@@ -21,4 +21,9 @@ export const processDocument = async (document_id) => {
     return res.data;
 };
 
+export const generateEmbeddings = async (document_id) => {
+    const res = await api.post(`/embed/${document_id}`);
+    return res.data;
+};
+
 export default api;

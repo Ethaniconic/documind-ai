@@ -5,12 +5,14 @@ import UploadBox from "./components/UploadBox";
 import UploadButton from "./components/UploadButton";
 import FileCard from "./components/FileCard";
 import ProcessButton from "./components/ProcessButton";
+import EmbeddingCard from "./components/EmbeddingCard";
 
 const App = () => {
   const [file, setFile] = useState(null);
   const [uploadedDoc, setUploadedDoc] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [processed, setProcessed] = useState(false);
 
   const handleUpload = async () => {
     if (!file || loading) return;
@@ -71,11 +73,24 @@ const App = () => {
           <UploadButton onUpload={handleUpload} loading={loading} disabled={!file} />
         )}
 
-        {/* 5. Green success card + Process button */}
+        {/* 5. Green success card + Process button + Embedding card */}
         {uploadedDoc && (
           <>
-            <FileCard doc={uploadedDoc} isSuccess={true} onRemove={() => setUploadedDoc(null)} />
-            <ProcessButton document_id={uploadedDoc.stored_name?.replace(".pdf", "")} />
+            <FileCard
+              doc={uploadedDoc}
+              isSuccess={true}
+              onRemove={() => {
+                setUploadedDoc(null);
+                setProcessed(false);
+              }}
+            />
+            <ProcessButton
+              document_id={uploadedDoc.stored_name?.replace(".pdf", "")}
+              onDone={() => setProcessed(true)}
+            />
+            {processed && (
+              <EmbeddingCard document={uploadedDoc} />
+            )}
           </>
         )}
       </div>
