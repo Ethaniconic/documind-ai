@@ -26,4 +26,9 @@ export const generateEmbeddings = async (document_id) => {
     return res.data;
 };
 
+export const searchDocuments = async (query, top_k = 5) => {
+    const res = await api.post("/search", { query, top_k });
+    return res.data;
+};
+
 export default api;

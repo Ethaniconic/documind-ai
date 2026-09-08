@@ -2,6 +2,7 @@ from pathlib import Path
 from fastapi import APIRouter, HTTPException
 from app.services.embedding_service import EmbeddingService
 from app.models.chunk import Chunk
+from app.services.vector_store import VectorStore
 import json
 
 router = APIRouter()
@@ -22,6 +23,17 @@ def generate_embeddings(document_id: str):
         chunks = [Chunk.model_validate(chunk_data) for chunk_data in chunks_data]
 
     embeddings = embedding_service.generate_document_embeddings(chunks)
+
+    # Index into persistent Vector Store
+    vector_store = VectorStore(dimension=384)
+    try:
+        vector_store.load()
+    except FileNotFoundError:
+        pass
+
+    vector_store.add_vectors([item.embedding for item in embeddings])
+    vector_store.add_metadata(chunks)
+    vector_store.save()
 
     return {
         "document": document_id,

@@ -6,8 +6,10 @@ import UploadButton from "./components/UploadButton";
 import FileCard from "./components/FileCard";
 import ProcessButton from "./components/ProcessButton";
 import EmbeddingCard from "./components/EmbeddingCard";
+import SearchBox from "./components/SearchBox";
 
 const App = () => {
+  const [activeTab, setActiveTab] = useState("upload");
   const [file, setFile] = useState(null);
   const [uploadedDoc, setUploadedDoc] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -34,15 +36,43 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-[#182234] text-white flex items-center justify-center p-4">
-      <div className="w-full max-w-sm bg-[#0a0f1d] border border-slate-800/80 rounded-2xl p-6 shadow-2xl space-y-4">
+      <div className={`w-full ${activeTab === "search" ? "max-w-lg" : "max-w-sm"} bg-[#0a0f1d] border border-slate-800/80 rounded-2xl p-6 shadow-2xl space-y-4 transition-all duration-300`}>
         {/* 1. Header */}
         <Header />
 
-        {/* 2. Upload box */}
-        <UploadBox
-          onFileSelect={(f) => { setFile(f); setUploadedDoc(null); setError(null); }}
-          onError={(msg) => { setError(msg); setFile(null); }}
-        />
+        {/* Tab Navigation */}
+        <div className="flex border-b border-slate-800 pb-2 gap-4 text-xs font-medium">
+          <button
+            onClick={() => setActiveTab("upload")}
+            className={`pb-1 transition-colors cursor-pointer ${
+              activeTab === "upload"
+                ? "text-indigo-400 border-b-2 border-indigo-500 font-semibold"
+                : "text-slate-400 hover:text-slate-200"
+            }`}
+          >
+            Upload Document
+          </button>
+          <button
+            onClick={() => setActiveTab("search")}
+            className={`pb-1 transition-colors cursor-pointer ${
+              activeTab === "search"
+                ? "text-indigo-400 border-b-2 border-indigo-500 font-semibold"
+                : "text-slate-400 hover:text-slate-200"
+            }`}
+          >
+            Semantic Search
+          </button>
+        </div>
+
+        {activeTab === "search" ? (
+          <SearchBox />
+        ) : (
+          <>
+            {/* 2. Upload box */}
+            <UploadBox
+              onFileSelect={(f) => { setFile(f); setUploadedDoc(null); setError(null); }}
+              onError={(msg) => { setError(msg); setFile(null); }}
+            />
 
         {/* Red Alert Card */}
         {error && (
@@ -93,9 +123,10 @@ const App = () => {
             )}
           </>
         )}
+          </>
+        )}
       </div>
     </div>
   );
 };
-
 export default App;
