@@ -16,6 +16,7 @@ class EmbeddingService:
         return embedding
 
     def save_embeddings(self, document_id, embeddings):
+        PROCESSED_PATH.mkdir(parents=True, exist_ok=True)
         output_file = PROCESSED_PATH / f"{document_id}_embeddings.json"
 
         data = {

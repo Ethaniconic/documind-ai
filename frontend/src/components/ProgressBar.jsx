@@ -4,20 +4,20 @@ const ProgressBar = ({ progress = 0, indeterminate = false, label = "" }) => {
   const clamped = Math.min(100, Math.max(0, progress));
 
   return (
-    <div className="w-full space-y-1.5">
+    <div className="w-full space-y-1.5 font-mono">
       {(label || !indeterminate) && (
-        <div className="flex items-center justify-between text-xs text-slate-400 font-medium">
-          <span>{label}</span>
-          {!indeterminate && <span>{Math.round(clamped)}%</span>}
+        <div className="flex items-center justify-between text-xs text-slate-300">
+          <span className="font-semibold uppercase tracking-wider text-[11px]">{label}</span>
+          {!indeterminate && <span className="text-indigo-400 font-bold">{Math.round(clamped)}%</span>}
         </div>
       )}
 
-      <div className="h-2 w-full bg-slate-800/80 rounded-full overflow-hidden p-0.5 border border-slate-700/40">
+      <div className="h-3 w-full bg-slate-900 border-2 border-slate-700 p-0.5 relative overflow-hidden">
         {indeterminate ? (
-          <div className="h-full w-2/5 rounded-full bg-gradient-to-r from-blue-500 via-indigo-500 to-pink-500 animate-[indeterminate_1.5s_infinite_linear]" />
+          <div className="h-full w-2/5 bg-indigo-500 animate-[indeterminate_1.2s_infinite_linear]" />
         ) : (
           <div
-            className="h-full rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transition-all duration-300 ease-out shadow-sm shadow-purple-500/50"
+            className="h-full bg-gradient-to-r from-indigo-500 to-emerald-400 transition-all duration-300 ease-out"
             style={{ width: `${clamped}%` }}
           />
         )}

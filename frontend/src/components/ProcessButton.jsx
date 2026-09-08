@@ -22,8 +22,12 @@ const ProcessButton = ({ document_id, onDone }) => {
 
   if (result) {
     return (
-      <div className="flex items-center gap-2 p-3 rounded-xl bg-violet-950/30 border border-violet-500/30 text-violet-300 text-xs">
-        ✓ Processed — {result.chunks_created ?? "chunks saved"}
+      <div className="flex items-center justify-between p-3 bg-indigo-950/40 border-2 border-indigo-500/60 font-mono text-xs text-indigo-300 shadow-[3px_3px_0px_0px_#4338ca]">
+        <div className="flex items-center gap-2">
+          <span className="font-bold text-emerald-400">✓ PROCESSED</span>
+          <span className="text-slate-400">|</span>
+          <span>Chunks ready for vectorization</span>
+        </div>
       </div>
     );
   }
@@ -33,23 +37,20 @@ const ProcessButton = ({ document_id, onDone }) => {
       <button
         onClick={handleProcess}
         disabled={loading}
-        className="w-full py-2.5 px-4 rounded-xl font-medium text-sm text-white bg-violet-600 hover:bg-violet-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg shadow-violet-950/40 flex items-center justify-center gap-2 cursor-pointer"
+        className="w-full py-3 px-4 font-mono font-bold text-xs uppercase tracking-wider text-white bg-indigo-700 hover:bg-indigo-600 disabled:opacity-50 disabled:cursor-not-allowed border-2 border-indigo-400 shadow-[4px_4px_0px_0px_#3730a3] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[2px_2px_0px_0px_#3730a3] transition-all flex items-center justify-center gap-2 cursor-pointer"
       >
         {loading ? (
           <>
-            <svg className="animate-spin h-4 w-4 text-white" viewBox="0 0 24 24">
-              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
-              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-            </svg>
-            <span>Processing...</span>
+            <span className="w-3.5 h-3.5 border-2 border-white border-t-transparent animate-spin inline-block"></span>
+            <span>Chunking Text & Cleaning...</span>
           </>
         ) : (
-          <span>Process Document</span>
+          <span>▶ CHUNK & PROCESS DOCUMENT</span>
         )}
       </button>
 
       {error && (
-        <p className="text-xs text-rose-400 text-center">{error}</p>
+        <p className="text-xs font-mono text-rose-400 text-center">{error}</p>
       )}
     </div>
   );

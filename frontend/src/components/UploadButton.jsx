@@ -5,18 +5,15 @@ const UploadButton = ({ onUpload, loading, disabled }) => {
     <button
       onClick={onUpload}
       disabled={disabled || loading}
-      className="w-full py-2.5 px-4 rounded-xl font-medium text-sm text-white bg-cyan-600 hover:bg-cyan-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg shadow-cyan-950/40 flex items-center justify-center gap-2 cursor-pointer"
+      className="w-full py-3 px-4 font-mono font-bold text-xs uppercase tracking-wider text-white bg-indigo-600 hover:bg-indigo-500 disabled:opacity-40 disabled:cursor-not-allowed border-2 border-indigo-400 shadow-[4px_4px_0px_0px_#4338ca] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[2px_2px_0px_0px_#4338ca] transition-all flex items-center justify-center gap-2 cursor-pointer"
     >
       {loading ? (
         <>
-          <svg className="animate-spin h-4 w-4 text-white" viewBox="0 0 24 24">
-            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
-            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-          </svg>
-          <span>Uploading...</span>
+          <span className="w-3.5 h-3.5 border-2 border-white border-t-transparent animate-spin inline-block"></span>
+          <span>Uploading Document...</span>
         </>
       ) : (
-        <span>Upload File</span>
+        <span>▶ INGEST & UPLOAD FILE</span>
       )}
     </button>
   );

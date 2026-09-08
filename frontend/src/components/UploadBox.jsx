@@ -29,10 +29,18 @@ const UploadBox = ({ onFileSelect, onError }) => {
       onDragOver={(e) => { e.preventDefault(); setIsDrag(true); }}
       onDragLeave={() => setIsDrag(false)}
       onDrop={handleDrop}
-      className={`border border-dashed rounded-2xl p-7 text-center cursor-pointer transition-all duration-300 ${
-        isDrag ? "border-cyan-400 bg-cyan-950/30 scale-[1.01]" : "border-slate-800 bg-[#0d1527]/70 hover:border-cyan-500/60"
+      className={`relative border-2 border-dashed p-6 text-center cursor-pointer transition-all ${
+        isDrag
+          ? "border-indigo-400 bg-indigo-950/40"
+          : "border-slate-700/80 bg-[#0d1424] hover:border-indigo-500/80 hover:bg-[#0f172a]"
       }`}
     >
+      {/* Corner crosshairs */}
+      <span className="absolute top-1 left-1 text-slate-600 font-mono text-[10px] select-none">+</span>
+      <span className="absolute top-1 right-1 text-slate-600 font-mono text-[10px] select-none">+</span>
+      <span className="absolute bottom-1 left-1 text-slate-600 font-mono text-[10px] select-none">+</span>
+      <span className="absolute bottom-1 right-1 text-slate-600 font-mono text-[10px] select-none">+</span>
+
       <input
         ref={inputRef}
         type="file"
@@ -40,14 +48,26 @@ const UploadBox = ({ onFileSelect, onError }) => {
         className="hidden"
         onChange={(e) => validateAndSelect(e.target.files?.[0])}
       />
-      <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-cyan-950/80 border border-cyan-500/40 flex items-center justify-center text-cyan-400">
+
+      <div className="w-12 h-12 mx-auto mb-3 border-2 border-indigo-500/60 bg-indigo-950/70 flex items-center justify-center text-indigo-400 shadow-[3px_3px_0px_0px_#4f46e5]">
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
         </svg>
       </div>
-      <h3 className="text-sm font-semibold text-slate-200">Drop your files here or browse</h3>
-      <p className="text-xs text-slate-400 mt-1">Support files: PDF</p>
-      <p className="text-[11px] text-slate-500 mt-0.5">Max file size: 20MB</p>
+
+      <h3 className="text-sm font-bold text-slate-100 tracking-wide uppercase font-mono">
+        Drop Document Here
+      </h3>
+      <p className="text-xs text-slate-400 mt-1">or click to browse files</p>
+
+      <div className="flex items-center justify-center gap-2 mt-4 text-[10px] font-mono">
+        <span className="bg-slate-800 border border-slate-700 text-indigo-300 px-2 py-0.5 font-bold">
+          FORMAT: PDF
+        </span>
+        <span className="bg-slate-800 border border-slate-700 text-slate-400 px-2 py-0.5">
+          MAX: 20 MB
+        </span>
+      </div>
     </div>
   );
 };

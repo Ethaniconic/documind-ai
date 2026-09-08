@@ -31,4 +31,9 @@ export const searchDocuments = async (query, top_k = 5) => {
     return res.data;
 };
 
+export const retrieveDocuments = async (query, top_k = 5) => {
+    const res = await api.post("/retrieve", { query, top_k });
+    return res.data;
+};
+
 export default api;

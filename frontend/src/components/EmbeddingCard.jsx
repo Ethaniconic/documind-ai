@@ -8,7 +8,6 @@ function EmbeddingCard({ document }) {
   const [successData, setSuccessData] = useState(null);
   const [error, setError] = useState(null);
 
-  // Extract document_id from various input shapes
   const documentId =
     document?.document_id ||
     document?.id ||
@@ -24,7 +23,7 @@ function EmbeddingCard({ document }) {
           if (prev >= 90) return prev;
           return prev + Math.floor(Math.random() * 15 + 5);
         });
-      }, 400);
+      }, 350);
     } else if (successData) {
       setProgress(100);
     }
@@ -41,7 +40,6 @@ function EmbeddingCard({ document }) {
     setError(null);
 
     try {
-      // Axios request to FastAPI embedding endpoint
       const res = await axios.post(`http://127.0.0.1:8000/embed/${documentId}`);
       
       setSuccessData({
@@ -59,120 +57,101 @@ function EmbeddingCard({ document }) {
     }
   }
 
-  // 1. Success Card View (Matches Dashboard Aesthetic)
+  // 1. Success Dashboard View
   if (successData) {
     return (
-      <div className="w-full bg-[#0d1322] border border-slate-800 rounded-2xl p-5 shadow-xl space-y-4 transition-all">
-        {/* Header with pill status badge */}
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-              </svg>
+      <div className="w-full bg-[#0d1424] border-2 border-slate-700/90 p-5 shadow-[4px_4px_0px_0px_#1e293b] space-y-4 font-mono">
+        {/* Header */}
+        <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+          <div className="flex items-center gap-2">
+            <div className="w-7 h-7 bg-indigo-950 border border-indigo-500/60 flex items-center justify-center text-indigo-400 font-bold text-xs">
+              ⚡
             </div>
             <div>
-              <h3 className="text-sm font-semibold text-white tracking-tight">Embedding Engine</h3>
-              <p className="text-[11px] text-slate-400">Vector representation active</p>
+              <h3 className="text-xs font-bold text-white uppercase tracking-wider">Vector Index Active</h3>
+              <p className="text-[10px] text-slate-400">Indexed into local FAISS</p>
             </div>
           </div>
 
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-medium bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            {successData.status}
+          <span className="px-2 py-0.5 text-[10px] font-bold bg-emerald-950/80 border border-emerald-500 text-emerald-400">
+            ● READY
           </span>
         </div>
 
-        {/* Metric Grid */}
-        <div className="grid grid-cols-2 gap-2.5 pt-1">
-          <div className="bg-[#131b2e] border border-slate-800/80 rounded-xl p-3">
-            <span className="text-[10px] uppercase font-semibold tracking-wider text-slate-400">
-              Embedding Model
+        {/* Square Metric Tiles */}
+        <div className="grid grid-cols-2 gap-2">
+          <div className="bg-[#080d1a] border border-slate-800 p-2.5">
+            <span className="text-[9px] uppercase text-slate-400 block font-bold">
+              MODEL
             </span>
-            <p className="text-sm font-bold text-white mt-0.5 truncate" title={successData.model}>
+            <p className="text-xs font-bold text-slate-100 mt-1 truncate" title={successData.model}>
               {successData.model}
             </p>
           </div>
 
-          <div className="bg-[#131b2e] border border-slate-800/80 rounded-xl p-3">
-            <span className="text-[10px] uppercase font-semibold tracking-wider text-slate-400">
-              Dimension
+          <div className="bg-[#080d1a] border border-slate-800 p-2.5">
+            <span className="text-[9px] uppercase text-slate-400 block font-bold">
+              DIMENSION
             </span>
-            <p className="text-sm font-bold text-indigo-300 mt-0.5">
-              {successData.dimension}
+            <p className="text-xs font-bold text-indigo-400 mt-1">
+              {successData.dimension}D Vector
             </p>
           </div>
 
-          <div className="bg-[#131b2e] border border-slate-800/80 rounded-xl p-3">
-            <span className="text-[10px] uppercase font-semibold tracking-wider text-slate-400">
-              Chunks Embedded
+          <div className="bg-[#080d1a] border border-slate-800 p-2.5">
+            <span className="text-[9px] uppercase text-slate-400 block font-bold">
+              CHUNKS INDEXED
             </span>
-            <p className="text-sm font-bold text-white mt-0.5">
-              {successData.chunksEmbedded}
+            <p className="text-xs font-bold text-emerald-400 mt-1">
+              {successData.chunksEmbedded} Chunks
             </p>
           </div>
 
-          <div className="bg-[#131b2e] border border-slate-800/80 rounded-xl p-3">
-            <span className="text-[10px] uppercase font-semibold tracking-wider text-slate-400">
-              Status
+          <div className="bg-[#080d1a] border border-slate-800 p-2.5">
+            <span className="text-[9px] uppercase text-slate-400 block font-bold">
+              FAISS STATUS
             </span>
-            <p className="text-sm font-semibold text-emerald-400 mt-0.5 truncate">
-              {successData.status}
+            <p className="text-xs font-bold text-sky-400 mt-1 truncate">
+              Persisted
             </p>
           </div>
         </div>
 
-        {/* Completed Progress Pill Bar */}
-        <div className="pt-1">
-          <ProgressBar progress={100} label="Vector Indexing Complete" />
-        </div>
+        <ProgressBar progress={100} label="FAISS Vector Store Ready" />
       </div>
     );
   }
 
-  // 2. Action / Loading View
+  // 2. Initial / Loading View
   return (
-    <div className="w-full bg-[#0d1322] border border-slate-800 rounded-2xl p-4 shadow-xl space-y-3">
-      <div className="flex items-center justify-between text-xs text-slate-400">
-        <span className="font-medium text-slate-300">Vector Embeddings</span>
-        <span className="text-[11px] text-slate-500 font-mono">{documentId || "No doc selected"}</span>
+    <div className="w-full bg-[#0d1424] border-2 border-slate-700/90 p-4 shadow-[4px_4px_0px_0px_#1e293b] space-y-3 font-mono">
+      <div className="flex items-center justify-between text-xs border-b border-slate-800 pb-2">
+        <span className="font-bold text-slate-200 uppercase tracking-wider text-[11px]">Neural Embeddings</span>
+        <span className="text-[10px] text-slate-400 truncate max-w-[120px]">{documentId || "No doc"}</span>
       </div>
 
       {loading && (
-        <div className="py-1">
-          <ProgressBar progress={progress} label="Generating vector embeddings..." />
-        </div>
+        <ProgressBar progress={progress} label="Encoding 384D Embeddings..." />
       )}
 
       {error && (
-        <div className="p-2.5 rounded-xl bg-rose-950/30 border border-rose-500/20 text-rose-300 text-xs flex items-center justify-between">
-          <span>{error}</span>
-          <button onClick={() => setError(null)} className="text-rose-400 hover:text-rose-200 text-xs ml-2 cursor-pointer">
-            ✕
-          </button>
+        <div className="p-2.5 bg-rose-950/40 border border-rose-500/40 text-rose-300 text-xs">
+          {error}
         </div>
       )}
 
       <button
         onClick={generateEmbeddings}
         disabled={loading || !documentId}
-        className="w-full py-2.5 px-4 rounded-xl font-medium text-sm text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-500 hover:via-indigo-500 hover:to-purple-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg shadow-indigo-950/50 flex items-center justify-center gap-2 cursor-pointer active:scale-[0.99]"
+        className="w-full py-3 px-4 font-mono font-bold text-xs uppercase tracking-wider text-white bg-gradient-to-r from-indigo-600 to-emerald-600 hover:from-indigo-500 hover:to-emerald-500 disabled:opacity-40 disabled:cursor-not-allowed border-2 border-indigo-400 shadow-[4px_4px_0px_0px_#4338ca] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[2px_2px_0px_0px_#4338ca] transition-all flex items-center justify-center gap-2 cursor-pointer"
       >
         {loading ? (
           <>
-            <svg className="animate-spin h-4 w-4 text-white" viewBox="0 0 24 24">
-              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
-              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-            </svg>
-            <span>Generating Embeddings...</span>
+            <span className="w-3.5 h-3.5 border-2 border-white border-t-transparent animate-spin inline-block"></span>
+            <span>Generating & Indexing...</span>
           </>
         ) : (
-          <>
-            <svg className="w-4 h-4 text-indigo-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-            <span>Generate Embeddings</span>
-          </>
+          <span>⚡ GENERATE FAISS EMBEDDINGS</span>
         )}
       </button>
     </div>
