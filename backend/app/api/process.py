@@ -40,5 +40,6 @@ def process_document(document_id: str):
 
     return {
         "document_id": document_id,
-        "status": "processed"
+        "status": "processed",
+        "total_chunks": len(chunks)
     }

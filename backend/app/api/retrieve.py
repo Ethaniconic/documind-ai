@@ -3,7 +3,6 @@ from app.models.search import SearchRequest
 from app.services.retriever import Retriever
 from app.services.embedding_service import EmbeddingService
 from app.services.vector_store import VectorStore
-from app.services.reranker import filter_results, remove_duplicates, build_context
 
 router = APIRouter()
 
@@ -17,19 +16,29 @@ def retrieve(request: SearchRequest):
     except FileNotFoundError:
         return {
             "query": request.query,
+            "candidates": [],
             "results": [],
             "context": ""
         }
 
     retriever = Retriever(embed_service, vector_store)
-    raw_results = retriever.retrieve(request.query, top_k=request.top_k)
+    raw_results = retriever.retrieve(request.query, top_k=request.top_k or 10)
 
-    filtered_results = filter_results(raw_results)
-    results = remove_duplicates(filtered_results)
-    context = build_context(results)
+    candidates = [
+        {
+            "score": round(chunk.score, 4),
+            "chunk_id": chunk.chunk_id,
+            "page_number": chunk.page_number,
+            "text": chunk.text,
+            "document_id": chunk.document_id,
+        }
+        for chunk in raw_results
+    ]
+    context = "\n\n".join([f"Page {c['page_number']}:\n{c['text']}" for c in candidates if c['text']])
 
     return {
         "query": request.query,
-        "results": results,
+        "candidates": candidates,
+        "results": candidates,
         "context": context
     }

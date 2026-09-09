@@ -23,6 +23,9 @@ class VectorStore:
         if vectors.shape[1] != self.dimension:
             raise ValueError(f"Embeddings must have dimension {self.dimension}, got {vectors.shape[1]}")
 
+        print("Embedding shape:", vectors.shape)
+        print("First vector norm:", np.linalg.norm(vectors[0]))
+
         self.index.add(vectors)
 
     def search(self, query_embedding, top_k=5):

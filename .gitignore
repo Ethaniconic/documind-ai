@@ -1,0 +1,42 @@
+# Environment & Secrets (CRITICAL: NEVER COMMIT SECRETS)
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+ENV/
+backend/venv/
+
+# Local Uploads & Processed Chunks
+backend/uploads/*
+!backend/uploads/.gitkeep
+backend/processed/chunks/*
+!backend/processed/chunks/.gitkeep
+backend/processed/embeddings/*
+!backend/processed/embeddings/.gitkeep
+
+# Node / Frontend Build
+node_modules/
+dist/
+dist-ssr/
+*.local
+.npm
+.eslintcache
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log

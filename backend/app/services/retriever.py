@@ -1,5 +1,6 @@
 # pyrefly: ignore [missing-import]
 import faiss
+import numpy as np
 from app.models.retrieval import RetrievedChunk
 from app.services.embedding_service import EmbeddingService
 from app.services.vector_store import VectorStore
@@ -9,9 +10,14 @@ class Retriever:
         self.embedding_service = embedding_service
         self.vector_store = vector_store
 
-    def retrieve(self, query, top_k=5):
+    def retrieve(self, query, top_k=10):
         query_vector = self.embedding_service.embed_text(query)
+        print("Query embedding shape:", query_vector.shape)
+        print("Query embedding norm:", np.linalg.norm(query_vector))
+
         distances, indices = self.vector_store.search(query_vector, top_k=top_k)
+        scores = distances[0].tolist()
+        print("Top scores:", scores)
 
         retrieved_chunks = []
 
@@ -20,16 +26,20 @@ class Retriever:
                 continue
 
             chunk = self.vector_store.metadata[idx]
+            text = (chunk.get("text") if isinstance(chunk, dict) else getattr(chunk, "text", "")) or ""
+            text = text.strip()
 
-            if chunk:
-                retrieved_chunks.append(
-                    RetrievedChunk(
-                        document_id=chunk["document_id"],
-                        chunk_id=chunk["chunk_id"],
-                        page_number=chunk["page_number"],
-                        score=float(score),
-                        text=chunk["text"],
-                    )
+            if not text:
+                continue
+
+            retrieved_chunks.append(
+                RetrievedChunk(
+                    document_id=chunk.get("document_id", "Document") if isinstance(chunk, dict) else getattr(chunk, "document_id", "Document"),
+                    chunk_id=chunk.get("chunk_id", "") if isinstance(chunk, dict) else getattr(chunk, "chunk_id", ""),
+                    page_number=chunk.get("page_number", 1) if isinstance(chunk, dict) else getattr(chunk, "page_number", 1),
+                    score=float(score),
+                    text=text,
                 )
+            )
 
         return retrieved_chunks

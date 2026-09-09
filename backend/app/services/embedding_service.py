@@ -12,7 +12,7 @@ class EmbeddingService:
         self.model = SentenceTransformer(MODEL_NAME)
 
     def embed_text(self, text):
-        embedding = self.model.encode(text, convert_to_numpy=True)
+        embedding = self.model.encode(text, convert_to_numpy=True, normalize_embeddings=True)
         return embedding
 
     def save_embeddings(self, document_id, embeddings):
@@ -34,10 +34,17 @@ class EmbeddingService:
         return output_file
 
     def generate_document_embeddings(self, chunks):
+        if not chunks:
+            return []
+
         embeddings = []
 
         for chunk in chunks:
-            embedding = self.embed_text(chunk.text)
+            text = (chunk.text or "").strip()
+            if not text:
+                continue
+
+            embedding = self.embed_text(text)
 
             record = EmbeddingRecord(
                 document_id=chunk.document_id,

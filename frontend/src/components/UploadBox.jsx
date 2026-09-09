@@ -49,22 +49,22 @@ const UploadBox = ({ onFileSelect, onError }) => {
         onChange={(e) => validateAndSelect(e.target.files?.[0])}
       />
 
-      <div className="w-12 h-12 mx-auto mb-3 border-2 border-indigo-500/60 bg-indigo-950/70 flex items-center justify-center text-indigo-400 shadow-[3px_3px_0px_0px_#4f46e5]">
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="w-14 h-14 mx-auto mb-4 border-2 border-indigo-500/60 bg-indigo-950/70 flex items-center justify-center text-indigo-400 shadow-[3px_3px_0px_0px_#4f46e5]">
+        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
         </svg>
       </div>
 
-      <h3 className="text-sm font-bold text-slate-100 tracking-wide uppercase font-mono">
+      <h3 className="text-base md:text-lg font-bold text-slate-100 tracking-wide uppercase font-mono">
         Drop Document Here
       </h3>
-      <p className="text-xs text-slate-400 mt-1">or click to browse files</p>
+      <p className="text-sm text-slate-400 mt-1.5">or click to browse files</p>
 
-      <div className="flex items-center justify-center gap-2 mt-4 text-[10px] font-mono">
-        <span className="bg-slate-800 border border-slate-700 text-indigo-300 px-2 py-0.5 font-bold">
+      <div className="flex items-center justify-center gap-3 mt-5 text-xs md:text-sm font-mono">
+        <span className="bg-slate-800 border-2 border-slate-700 text-indigo-300 px-3 py-1 font-bold shadow-[2px_2px_0px_0px_#1e293b]">
           FORMAT: PDF
         </span>
-        <span className="bg-slate-800 border border-slate-700 text-slate-400 px-2 py-0.5">
+        <span className="bg-slate-800 border-2 border-slate-700 text-slate-300 px-3 py-1 font-semibold shadow-[2px_2px_0px_0px_#1e293b]">
           MAX: 20 MB
         </span>
       </div>

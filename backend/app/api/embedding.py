@@ -22,6 +22,13 @@ def generate_embeddings(document_id: str):
         chunks_data = data["chunks"] if isinstance(data, dict) and "chunks" in data else data
         chunks = [Chunk.model_validate(chunk_data) for chunk_data in chunks_data]
 
+    if not chunks:
+        raise HTTPException(status_code=400, detail="Document has no text chunks to embed.")
+
+    chunks = [c for c in chunks if c.text and c.text.strip()]
+    if not chunks:
+        raise HTTPException(status_code=400, detail="Document has no valid text chunks to embed.")
+
     embeddings = embedding_service.generate_document_embeddings(chunks)
 
     # Index into persistent Vector Store
