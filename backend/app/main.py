@@ -25,6 +25,17 @@ app.include_router(chat.router)
 app.include_router(history.router)
 app.include_router(graph.router)
 
+@app.on_event("startup")
+def on_startup():
+    try:
+        from app.services.vector_store import VectorStore
+        vs = VectorStore(dimension=384)
+        vs.load()
+        print("[Startup] Vector store loaded successfully from local/Supabase.")
+    except Exception as e:
+        print(f"[Startup] Vector store initialization: {e}")
+
+
 @app.get("/")
 def root():
     return {
