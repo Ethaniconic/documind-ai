@@ -25,7 +25,7 @@ const ProcessButton = ({ document_id, onDone }) => {
       <div className="flex items-center justify-between p-4 bg-indigo-950/50 border-2 border-indigo-500/70 font-mono text-sm text-indigo-200 shadow-[3px_3px_0px_0px_#4338ca]">
         <div className="flex items-center gap-2.5">
           <span className="font-bold text-emerald-400 text-base">✓ PROCESSED</span>
-          <span className="text-slate-400">|</span>
+          <span className="text-muted">|</span>
           <span className="font-medium">
             {result.total_chunks ? `${result.total_chunks} Chunks ready` : "Chunks ready for vectorization"}
           </span>

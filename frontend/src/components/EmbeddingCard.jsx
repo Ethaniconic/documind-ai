@@ -60,16 +60,16 @@ function EmbeddingCard({ document }) {
   // 1. Success Dashboard View
   if (successData) {
     return (
-      <div className="w-full bg-[#0d1424] border-2 border-slate-700/90 p-5 shadow-[4px_4px_0px_0px_#1e293b] space-y-4 font-mono">
+      <div className="w-full bg-surface border-2 border-subtle/90 p-5 shadow-[4px_4px_0px_0px_#1e293b] space-y-4 font-mono">
         {/* Header */}
-        <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+        <div className="flex items-center justify-between border-b border-subtle pb-3">
           <div className="flex items-center gap-2">
             <div className="w-7 h-7 bg-indigo-950 border border-indigo-500/60 flex items-center justify-center text-indigo-400 font-bold text-xs">
               ⚡
             </div>
             <div>
               <h3 className="text-xs font-bold text-white uppercase tracking-wider">Vector Index Active</h3>
-              <p className="text-[10px] text-slate-400">Indexed into local FAISS</p>
+              <p className="text-[10px] text-muted">Indexed into local FAISS</p>
             </div>
           </div>
 
@@ -80,17 +80,17 @@ function EmbeddingCard({ document }) {
 
         {/* Square Metric Tiles */}
         <div className="grid grid-cols-2 gap-2">
-          <div className="bg-[#080d1a] border border-slate-800 p-2.5">
-            <span className="text-[9px] uppercase text-slate-400 block font-bold">
+          <div className="bg-background border border-subtle p-2.5">
+            <span className="text-[9px] uppercase text-muted block font-bold">
               MODEL
             </span>
-            <p className="text-xs font-bold text-slate-100 mt-1 truncate" title={successData.model}>
+            <p className="text-xs font-bold text-foreground mt-1 truncate" title={successData.model}>
               {successData.model}
             </p>
           </div>
 
-          <div className="bg-[#080d1a] border border-slate-800 p-2.5">
-            <span className="text-[9px] uppercase text-slate-400 block font-bold">
+          <div className="bg-background border border-subtle p-2.5">
+            <span className="text-[9px] uppercase text-muted block font-bold">
               DIMENSION
             </span>
             <p className="text-xs font-bold text-indigo-400 mt-1">
@@ -98,8 +98,8 @@ function EmbeddingCard({ document }) {
             </p>
           </div>
 
-          <div className="bg-[#080d1a] border border-slate-800 p-2.5">
-            <span className="text-[9px] uppercase text-slate-400 block font-bold">
+          <div className="bg-background border border-subtle p-2.5">
+            <span className="text-[9px] uppercase text-muted block font-bold">
               CHUNKS INDEXED
             </span>
             <p className="text-xs font-bold text-emerald-400 mt-1">
@@ -107,8 +107,8 @@ function EmbeddingCard({ document }) {
             </p>
           </div>
 
-          <div className="bg-[#080d1a] border border-slate-800 p-2.5">
-            <span className="text-[9px] uppercase text-slate-400 block font-bold">
+          <div className="bg-background border border-subtle p-2.5">
+            <span className="text-[9px] uppercase text-muted block font-bold">
               FAISS STATUS
             </span>
             <p className="text-xs font-bold text-sky-400 mt-1 truncate">
@@ -124,10 +124,10 @@ function EmbeddingCard({ document }) {
 
   // 2. Initial / Loading View
   return (
-    <div className="w-full bg-[#0d1424] border-2 border-slate-700/90 p-4 shadow-[4px_4px_0px_0px_#1e293b] space-y-3 font-mono">
-      <div className="flex items-center justify-between text-xs border-b border-slate-800 pb-2">
-        <span className="font-bold text-slate-200 uppercase tracking-wider text-[11px]">Neural Embeddings</span>
-        <span className="text-[10px] text-slate-400 truncate max-w-[120px]">{documentId || "No doc"}</span>
+    <div className="w-full bg-surface border-2 border-subtle/90 p-4 shadow-[4px_4px_0px_0px_#1e293b] space-y-3 font-mono">
+      <div className="flex items-center justify-between text-xs border-b border-subtle pb-2">
+        <span className="font-bold text-foreground uppercase tracking-wider text-[11px]">Neural Embeddings</span>
+        <span className="text-[10px] text-muted truncate max-w-[120px]">{documentId || "No doc"}</span>
       </div>
 
       {loading && (

@@ -74,7 +74,7 @@ function RetrievalPage() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search document knowledge base..."
-            className="w-full bg-[#080d1a] border-2 border-slate-700 py-3.5 pl-11 pr-36 text-base text-white placeholder-slate-500 focus:outline-none focus:border-indigo-400 shadow-[3px_3px_0px_0px_#1e293b]"
+            className="w-full bg-background border-2 border-subtle py-3.5 pl-11 pr-36 text-base text-white placeholder-slate-500 focus:outline-none focus:border-indigo-400 shadow-[3px_3px_0px_0px_#1e293b]"
           />
           <button
             type="submit"
@@ -87,7 +87,7 @@ function RetrievalPage() {
 
         {/* Quick Sample Queries */}
         <div className="flex flex-wrap items-center gap-2 pt-1">
-          <span className="text-xs md:text-sm text-slate-400 font-bold uppercase tracking-wider mr-1">
+          <span className="text-xs md:text-sm text-muted font-bold uppercase tracking-wider mr-1">
             TRY:
           </span>
           {sampleQueries.map((sq, i) => (
@@ -95,7 +95,7 @@ function RetrievalPage() {
               key={i}
               type="button"
               onClick={() => handleRetrieve(sq)}
-              className="text-xs md:text-sm bg-slate-900 border-2 border-slate-700/80 hover:border-indigo-400 text-slate-300 px-3 py-1.5 hover:text-white transition-colors cursor-pointer shadow-[2px_2px_0px_0px_#1e293b]"
+              className="text-xs md:text-sm bg-surface border-2 border-subtle/80 hover:border-indigo-400 text-foreground px-3 py-1.5 hover:text-white transition-colors cursor-pointer shadow-[2px_2px_0px_0px_#1e293b]"
             >
               {sq}
             </button>
@@ -113,7 +113,7 @@ function RetrievalPage() {
       {/* Results Header */}
       {hasSearched && (
         <div className="space-y-4 pt-2">
-          <div className="flex items-center justify-between text-sm border-b-2 border-slate-800 pb-2">
+          <div className="flex items-center justify-between text-sm border-b-2 border-subtle pb-2">
             <div className="flex items-center gap-3">
               <span className="font-bold text-white uppercase text-xs md:text-sm tracking-wider">
                 SEARCH RESULTS
@@ -122,15 +122,15 @@ function RetrievalPage() {
                 {results.length} CHUNKS
               </span>
             </div>
-            <span className="text-xs text-slate-400">RAW CANDIDATES (TOP 10)</span>
+            <span className="text-xs text-muted">RAW CANDIDATES (TOP 10)</span>
           </div>
 
           {results.length === 0 ? (
-            <div className="p-8 bg-[#080d1a] border-2 border-dashed border-slate-800 text-center">
-              <p className="text-sm md:text-base text-slate-300 uppercase tracking-wider font-bold">
+            <div className="p-8 bg-background border-2 border-dashed border-subtle text-center">
+              <p className="text-sm md:text-base text-foreground uppercase tracking-wider font-bold">
                 No matching chunks above threshold
               </p>
-              <p className="text-xs text-slate-500 mt-2">
+              <p className="text-xs text-muted mt-2">
                 Try another query or upload and embed more documents.
               </p>
             </div>
@@ -147,15 +147,15 @@ function RetrievalPage() {
                 return (
                   <div
                     key={index}
-                    className="bg-[#0d1424] border-2 border-slate-700 p-5 shadow-[4px_4px_0px_0px_#1e293b] space-y-3.5 hover:border-indigo-500 transition-all"
+                    className="bg-surface border-2 border-subtle p-5 shadow-[4px_4px_0px_0px_#1e293b] space-y-3.5 hover:border-indigo-500 transition-all"
                   >
                     {/* Top Row: Chunk ID & Similarity Score */}
                     <div className="flex items-center justify-between flex-wrap gap-2 text-sm">
                       <div className="flex items-center gap-2.5">
-                        <span className="bg-slate-900 border-2 border-slate-700 text-slate-300 px-2.5 py-1 text-xs font-bold">
+                        <span className="bg-surface border-2 border-subtle text-foreground px-2.5 py-1 text-xs font-bold">
                           {item.chunk_id || `CHUNK-${index + 1}`}
                         </span>
-                        <span className="text-xs text-slate-400">
+                        <span className="text-xs text-muted">
                           {item.text?.length || 0} chars
                         </span>
                       </div>
@@ -175,19 +175,19 @@ function RetrievalPage() {
                     </div>
 
                     {/* Chunk Content - Enlarged, Clear Sans Text */}
-                    <div className="bg-[#080d1a] border-2 border-slate-800/90 p-4 text-sm md:text-base text-slate-200 leading-relaxed font-sans select-text shadow-inner">
+                    <div className="bg-background border-2 border-subtle/90 p-4 text-sm md:text-base text-foreground leading-relaxed font-sans select-text shadow-inner">
                       {item.text}
                     </div>
 
                     {/* Bottom Row: Document Source & Page */}
-                    <div className="flex items-center justify-between text-xs md:text-sm pt-2 text-slate-400 border-t border-slate-800">
-                      <div className="flex items-center gap-1.5 text-slate-300 truncate max-w-[280px]">
+                    <div className="flex items-center justify-between text-xs md:text-sm pt-2 text-muted border-t border-subtle">
+                      <div className="flex items-center gap-1.5 text-foreground truncate max-w-[280px]">
                         <span className="text-indigo-400 font-bold">DOC:</span>
                         <span className="truncate font-semibold">
                           {item.document_id || "Document"}
                         </span>
                       </div>
-                      <div className="bg-slate-900 border-2 border-slate-800 px-2.5 py-0.5 text-slate-200 text-xs font-bold">
+                      <div className="bg-surface border-2 border-subtle px-2.5 py-0.5 text-foreground text-xs font-bold">
                         PAGE {item.page_number}
                       </div>
                     </div>
@@ -199,20 +199,20 @@ function RetrievalPage() {
 
           {/* Assembled RAG Context Drawer */}
           {context && (
-            <div className="mt-5 pt-4 border-t-2 border-slate-800 space-y-3">
+            <div className="mt-5 pt-4 border-t-2 border-subtle space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-xs md:text-sm font-bold text-slate-200 uppercase tracking-wider">
+                <span className="text-xs md:text-sm font-bold text-foreground uppercase tracking-wider">
                   ASSEMBLED LLM CONTEXT
                 </span>
                 <button
                   onClick={copyContext}
-                  className="text-xs bg-slate-800 hover:bg-slate-700 border-2 border-slate-600 px-3 py-1.5 text-slate-200 uppercase font-bold cursor-pointer shadow-[2px_2px_0px_0px_#1e293b]"
+                  className="text-xs bg-surface-hover hover:bg-slate-700 border-2 border-slate-600 px-3 py-1.5 text-foreground uppercase font-bold cursor-pointer shadow-[2px_2px_0px_0px_#1e293b]"
                 >
                   {copied ? "✓ COPIED" : "COPY CONTEXT"}
                 </button>
               </div>
 
-              <pre className="p-4 bg-[#080d1a] border-2 border-slate-800 text-xs md:text-sm text-slate-300 whitespace-pre-wrap leading-relaxed max-h-56 overflow-y-auto">
+              <pre className="p-4 bg-background border-2 border-subtle text-xs md:text-sm text-foreground whitespace-pre-wrap leading-relaxed max-h-56 overflow-y-auto">
                 {context}
               </pre>
             </div>

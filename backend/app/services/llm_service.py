@@ -3,6 +3,12 @@ from app.core.config import settings
 
 _client = None
 
+FALLBACK_MODELS = [
+    "gemini-flash-latest",
+    "gemini-3.5-flash",
+    "gemini-3.6-flash",
+]
+
 
 def get_client():
     global _client
@@ -14,11 +20,21 @@ def get_client():
 class LLMService:
     def generate(self, prompt: str, max_new_tokens: int = 512) -> str:
         client = get_client()
-        response = client.models.generate_content(
-            model=settings.GEMINI_MODEL,
-            contents=prompt,
-        )
-        return response.text.strip() if response.text else ""
+        models = [settings.GEMINI_MODEL] + [m for m in FALLBACK_MODELS if m != settings.GEMINI_MODEL]
+
+        for model in models:
+            try:
+                response = client.models.generate_content(
+                    model=model,
+                    contents=prompt,
+                )
+                if response and response.text:
+                    return response.text.strip()
+            except Exception as error:
+                # If model is unavailable (503/429), try next candidate
+                continue
+
+        return "The AI assistant is momentarily handling high traffic. Please try asking again in a few seconds."
 
 
 # =====================================================================

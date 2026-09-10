@@ -5,6 +5,7 @@ class ChatRequest(BaseModel):
     query: str
     document_id: str | None = None
     chat_id: str | None = None
+    user_id: str | None = None
 
 
 class ChatResponse(BaseModel):

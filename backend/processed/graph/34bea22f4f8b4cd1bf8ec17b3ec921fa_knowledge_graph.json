@@ -1,0 +1,698 @@
+{
+  "document": {
+    "id": "34bea22f4f8b4cd1bf8ec17b3ec921fa",
+    "title": "Smart AI-Enabled Rapid Feed and Silage Quality Testing System Proposal",
+    "domain": "Agriculture AI / FoodTech",
+    "summary": "A rapid, low-cost hybrid hardware-software system designed to grade feed and silage quality using computer vision and deep learning. This system provides procurement agencies and farmers with an affordable, consistent, and offline-first evaluation toolkit under INR 1,500.",
+    "total_pages": 7
+  },
+  "nodes": [
+    {
+      "id": "root_34bea22f4f8b4cd1bf8ec17b3ec921fa",
+      "label": "Smart AI-Enabled Rapid Feed and Silage Quality Testing System Proposal",
+      "type": "root",
+      "description": "A rapid, low-cost hybrid hardware-software system designed to grade feed and silage quality using computer vision and deep learning. This system provides procurement agencies and farmers with an affordable, consistent, and offline-first evaluation toolkit under INR 1,500.",
+      "importance": 1.0,
+      "level": 0,
+      "parent_id": null,
+      "source_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_chunks": [],
+      "source_excerpt": "A rapid, low-cost hybrid hardware-software system designed to grade feed and silage quality using computer vision and deep learning. This system provides procurement agencies and farmers with an affordable, consistent, and offline-first evaluation toolkit under INR 1,500."
+    },
+    {
+      "id": "project_overview_and_evaluation",
+      "label": "Project Overview and Evaluation",
+      "type": "topic",
+      "description": "High-level metadata, problem identification, evaluation metrics, and unique selling proposition of the SIH26111 proposal.",
+      "importance": 0.9,
+      "level": 1,
+      "parent_id": "root_34bea22f4f8b4cd1bf8ec17b3ec921fa",
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "sih26111_metadata",
+      "label": "Problem Statement Metadata",
+      "type": "subtopic",
+      "description": "Administrative details of problem statement SIH26111, sponsored by the Ministry of Fisheries, Animal Husbandry & Dairying.",
+      "importance": 0.8,
+      "level": 2,
+      "parent_id": "project_overview_and_evaluation",
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "sih26111_statement",
+      "label": "SIH26111 Problem Statement",
+      "type": "entity",
+      "description": "The specific challenge targeting rapid feed and silage quality testing categorized under Software/Agriculture.",
+      "importance": 0.85,
+      "level": 3,
+      "parent_id": "sih26111_metadata",
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_chunks": [],
+      "source_excerpt": "Smart AI-Enabled Rapid Feed and Silage Quality Testing System"
+    },
+    {
+      "id": "overall_score_metric",
+      "label": "Evaluation Score",
+      "type": "metric",
+      "description": "A feasibility assessment score of 4.8 out of 5 based on key operational parameters.",
+      "importance": 0.7,
+      "level": 3,
+      "parent_id": "sih26111_metadata",
+      "source_pages": [
+        2
+      ],
+      "source_chunks": [],
+      "source_excerpt": "OVERALL SCORE: 4.8 / 5"
+    },
+    {
+      "id": "unique_selling_proposition",
+      "label": "Unique Selling Proposition",
+      "type": "subtopic",
+      "description": "Key differentiating features that set this solution apart from traditional expensive laboratory methods.",
+      "importance": 0.85,
+      "level": 2,
+      "parent_id": "project_overview_and_evaluation",
+      "source_pages": [
+        2
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "low_cost_plug_play",
+      "label": "Low-Cost Plug-and-Play Box",
+      "type": "definition",
+      "description": "A complete imaging and analytical tool costing under INR 1500 that guarantees lab-grade testing consistency.",
+      "importance": 0.9,
+      "level": 3,
+      "parent_id": "unique_selling_proposition",
+      "source_pages": [
+        2
+      ],
+      "source_chunks": [],
+      "source_excerpt": "Complete plug-and-play solution under INR 1500"
+    },
+    {
+      "id": "hardware_architecture",
+      "label": "Hardware Architecture & BOM",
+      "type": "topic",
+      "description": "Physical design elements and Bill of Materials costing under the INR 1,500 target budget.",
+      "importance": 0.85,
+      "level": 1,
+      "parent_id": "root_34bea22f4f8b4cd1bf8ec17b3ec921fa",
+      "source_pages": [
+        3
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "bill_of_materials",
+      "label": "Bill of Materials",
+      "type": "subtopic",
+      "description": "Itemized listing of physical components required to build the standardized sample capture environment.",
+      "importance": 0.8,
+      "level": 2,
+      "parent_id": "hardware_architecture",
+      "source_pages": [
+        3
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "esp32_cam_module",
+      "label": "ESP32-CAM Module",
+      "type": "technology",
+      "description": "A 2MP OV2640 camera micro-controller with integrated WiFi for capturing and transmitting feed images.",
+      "importance": 0.85,
+      "level": 3,
+      "parent_id": "bill_of_materials",
+      "source_pages": [
+        3
+      ],
+      "source_chunks": [],
+      "source_excerpt": "ESP32-CAM (OV2640 2MP) Camera with WiFi for image capture"
+    },
+    {
+      "id": "custom_inspection_box",
+      "label": "Custom MDF/Acrylic Inspection Box",
+      "type": "entity",
+      "description": "An enclosed structure providing standard physical dimensions and diffused LED light to exclude external glare.",
+      "importance": 0.8,
+      "level": 3,
+      "parent_id": "bill_of_materials",
+      "source_pages": [
+        3
+      ],
+      "source_chunks": [],
+      "source_excerpt": "Custom MDF/Acrylic Inspection Box Controlled environment for consistent shots"
+    },
+    {
+      "id": "software_ai_architecture",
+      "label": "Software & AI/ML Architecture",
+      "type": "topic",
+      "description": "The end-to-end software application layers, deep learning models, datasets, and integration APIs.",
+      "importance": 0.95,
+      "level": 1,
+      "parent_id": "root_34bea22f4f8b4cd1bf8ec17b3ec921fa",
+      "source_pages": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "application_layers",
+      "label": "Application Layers",
+      "type": "subtopic",
+      "description": "The client-side web interfaces and asynchronous backend servers driving user interaction.",
+      "importance": 0.85,
+      "level": 2,
+      "parent_id": "software_ai_architecture",
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "farmer_pwa",
+      "label": "Farmer Progressive Web App (PWA)",
+      "type": "technology",
+      "description": "Offline-capable React/Next.js application featuring regional language translation and manual upload capabilities.",
+      "importance": 0.85,
+      "level": 3,
+      "parent_id": "application_layers",
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": [],
+      "source_excerpt": "Farmer PWA with image upload, results, scan history"
+    },
+    {
+      "id": "fastapi_backend_engine",
+      "label": "FastAPI Backend Engine",
+      "type": "technology",
+      "description": "A high-performance Python web API managing image upload queues via Celery and relational state in PostgreSQL.",
+      "importance": 0.8,
+      "level": 3,
+      "parent_id": "application_layers",
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": [],
+      "source_excerpt": "FastAPI backend, image pipeline, database, auth"
+    },
+    {
+      "id": "artificial_intelligence_models",
+      "label": "Artificial Intelligence Models",
+      "type": "subtopic",
+      "description": "Core computer vision pipelines responsible for anomaly detection and categorization of sample feed.",
+      "importance": 0.9,
+      "level": 2,
+      "parent_id": "software_ai_architecture",
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "yolov8_contaminant_detector",
+      "label": "YOLOv8 Contaminant Detector",
+      "type": "method",
+      "description": "A real-time object detection algorithm trained to identify foreign particles and impurities within sample trays.",
+      "importance": 0.85,
+      "level": 3,
+      "parent_id": "artificial_intelligence_models",
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": [],
+      "source_excerpt": "Train YOLOv8 for contaminant detection in feed"
+    },
+    {
+      "id": "efficientnet_classifier",
+      "label": "EfficientNet Quality Classifier",
+      "type": "method",
+      "description": "A deep convolutional network used to evaluate color, grain condition, and output A/B/C quality grades.",
+      "importance": 0.85,
+      "level": 3,
+      "parent_id": "artificial_intelligence_models",
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": [],
+      "source_excerpt": "EfficientNet classifier for A/B/C grading, ONNX export"
+    },
+    {
+      "id": "training_data_standards",
+      "label": "Training Data and Quality Standards",
+      "type": "subtopic",
+      "description": "Public and government data resources leveraged to benchmark model evaluation criteria.",
+      "importance": 0.75,
+      "level": 2,
+      "parent_id": "software_ai_architecture",
+      "source_pages": [
+        6
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "icar_standards",
+      "label": "ICAR Feed Standards",
+      "type": "entity",
+      "description": "Official Indian Council of Agricultural Research guidelines outlining feed parameters and grading metrics.",
+      "importance": 0.75,
+      "level": 3,
+      "parent_id": "training_data_standards",
+      "source_pages": [
+        6
+      ],
+      "source_chunks": [],
+      "source_excerpt": "Quality parameters and grading criteria"
+    },
+    {
+      "id": "project_execution_strategy",
+      "label": "Project Execution Strategy",
+      "type": "topic",
+      "description": "The operational timeline, mitigation strategies, and pitch plans structured for hackathon execution.",
+      "importance": 0.8,
+      "level": 1,
+      "parent_id": "root_34bea22f4f8b4cd1bf8ec17b3ec921fa",
+      "source_pages": [
+        6,
+        7
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "risk_management",
+      "label": "Risk Management & Mitigations",
+      "type": "subtopic",
+      "description": "Preemptive tactical strategies addressing physical and systemic operational risks.",
+      "importance": 0.75,
+      "level": 2,
+      "parent_id": "project_execution_strategy",
+      "source_pages": [
+        6
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "lighting_mitigation_strategy",
+      "label": "Lighting Mitigation Strategy",
+      "type": "process",
+      "description": "Eliminating erratic atmospheric ambient light through a tightly enclosed physical hardware structure.",
+      "importance": 0.8,
+      "level": 3,
+      "parent_id": "risk_management",
+      "source_pages": [
+        6
+      ],
+      "source_chunks": [],
+      "source_excerpt": "Controlled lighting inside custom hardware box"
+    }
+  ],
+  "edges": [
+    {
+      "source": "root_34bea22f4f8b4cd1bf8ec17b3ec921fa",
+      "target": "project_overview_and_evaluation",
+      "relationship": "contains_topic",
+      "confidence": 1.0,
+      "is_hierarchical": true,
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "project_overview_and_evaluation",
+      "target": "sih26111_metadata",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "sih26111_metadata",
+      "target": "sih26111_statement",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "sih26111_metadata",
+      "target": "overall_score_metric",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        2
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "project_overview_and_evaluation",
+      "target": "unique_selling_proposition",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        2
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "unique_selling_proposition",
+      "target": "low_cost_plug_play",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        2
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "root_34bea22f4f8b4cd1bf8ec17b3ec921fa",
+      "target": "hardware_architecture",
+      "relationship": "contains_topic",
+      "confidence": 1.0,
+      "is_hierarchical": true,
+      "source_pages": [
+        3
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "hardware_architecture",
+      "target": "bill_of_materials",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        3
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "bill_of_materials",
+      "target": "esp32_cam_module",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        3
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "bill_of_materials",
+      "target": "custom_inspection_box",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        3
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "root_34bea22f4f8b4cd1bf8ec17b3ec921fa",
+      "target": "software_ai_architecture",
+      "relationship": "contains_topic",
+      "confidence": 1.0,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "software_ai_architecture",
+      "target": "application_layers",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "application_layers",
+      "target": "farmer_pwa",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "application_layers",
+      "target": "fastapi_backend_engine",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "software_ai_architecture",
+      "target": "artificial_intelligence_models",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "artificial_intelligence_models",
+      "target": "yolov8_contaminant_detector",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "artificial_intelligence_models",
+      "target": "efficientnet_classifier",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "software_ai_architecture",
+      "target": "training_data_standards",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "training_data_standards",
+      "target": "icar_standards",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "root_34bea22f4f8b4cd1bf8ec17b3ec921fa",
+      "target": "project_execution_strategy",
+      "relationship": "contains_topic",
+      "confidence": 1.0,
+      "is_hierarchical": true,
+      "source_pages": [
+        6,
+        7
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "project_execution_strategy",
+      "target": "risk_management",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "risk_management",
+      "target": "lighting_mitigation_strategy",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "esp32_cam_module",
+      "target": "fastapi_backend_engine",
+      "relationship": "uses",
+      "confidence": 0.95,
+      "is_hierarchical": false,
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "fastapi_backend_engine",
+      "target": "yolov8_contaminant_detector",
+      "relationship": "uses",
+      "confidence": 0.9,
+      "is_hierarchical": false,
+      "source_pages": [
+        4,
+        5
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "fastapi_backend_engine",
+      "target": "efficientnet_classifier",
+      "relationship": "uses",
+      "confidence": 0.9,
+      "is_hierarchical": false,
+      "source_pages": [
+        4,
+        5
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "esp32_cam_module",
+      "target": "lighting_mitigation_strategy",
+      "relationship": "depends_on",
+      "confidence": 0.85,
+      "is_hierarchical": false,
+      "source_pages": [
+        3,
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "custom_inspection_box",
+      "target": "lighting_mitigation_strategy",
+      "relationship": "implemented_by",
+      "confidence": 0.95,
+      "is_hierarchical": false,
+      "source_pages": [
+        3,
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "icar_standards",
+      "target": "efficientnet_classifier",
+      "relationship": "depends_on",
+      "confidence": 0.8,
+      "is_hierarchical": false,
+      "source_pages": [
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "farmer_pwa",
+      "target": "fastapi_backend_engine",
+      "relationship": "uses",
+      "confidence": 0.92,
+      "is_hierarchical": false,
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": []
+    }
+  ],
+  "levels_available": [
+    0,
+    1,
+    2,
+    3
+  ]
+}

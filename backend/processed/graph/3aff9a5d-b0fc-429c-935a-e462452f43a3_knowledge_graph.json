@@ -1,0 +1,1087 @@
+{
+  "document": {
+    "id": "3aff9a5d-b0fc-429c-935a-e462452f43a3",
+    "title": "Smart AI-Enabled Rapid Feed and Silage Quality Testing System",
+    "domain": "Agriculture AI / FoodTech",
+    "summary": "This proposal details SIH26111, a low-cost, hybrid hardware-software system designed for real-time feed and silage quality testing. It utilizes a custom INR 1,500 imaging box with an ESP32-CAM to capture standardized samples analyzed by YOLOv8 and EfficientNet models.",
+    "total_pages": 7
+  },
+  "nodes": [
+    {
+      "id": "root_3aff9a5d_b0fc_429c_935a_e462452f43a3",
+      "label": "Smart AI-Enabled Rapid Feed and Silage Quality Testing System",
+      "type": "root",
+      "description": "This proposal details SIH26111, a low-cost, hybrid hardware-software system designed for real-time feed and silage quality testing. It utilizes a custom INR 1,500 imaging box with an ESP32-CAM to capture standardized samples analyzed by YOLOv8 and EfficientNet models.",
+      "importance": 1.0,
+      "level": 0,
+      "parent_id": null,
+      "source_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_chunks": [],
+      "source_excerpt": "This proposal details SIH26111, a low-cost, hybrid hardware-software system designed for real-time feed and silage quality testing. It utilizes a custom INR 1,500 imaging box with an ESP32-CAM to capture standardized samples analyzed by YOLOv8 and EfficientNet models."
+    },
+    {
+      "id": "project_overview",
+      "label": "Project Metadata and Value Proposition",
+      "type": "topic",
+      "description": "Initial parameters, evaluation scores, and the core unique selling proposition of the SIH26111 proposal.",
+      "importance": 0.9,
+      "level": 1,
+      "parent_id": "root_3aff9a5d_b0fc_429c_935a_e462452f43a3",
+      "source_pages": [
+        1,
+        2,
+        7
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "proposal_profile",
+      "label": "Proposal Profile",
+      "type": "subtopic",
+      "description": "Registration, organizational alignment, and competitive metrics for the hackathon.",
+      "importance": 0.8,
+      "level": 2,
+      "parent_id": "project_overview",
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "sih26111_problem_statement",
+      "label": "SIH26111 Problem Statement",
+      "type": "entity",
+      "description": "The official problem statement identifier for the Smart AI-Enabled Rapid Feed and Silage Quality Testing System.",
+      "importance": 0.95,
+      "level": 3,
+      "parent_id": "proposal_profile",
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_chunks": [],
+      "source_excerpt": "Smart AI-Enabled Rapid Feed and Silage Quality Testing System"
+    },
+    {
+      "id": "ministry_of_dairying",
+      "label": "Ministry of Fisheries, Animal Husbandry & Dairying",
+      "type": "organization",
+      "description": "The primary government organization sponsoring and setting requirements for this agricultural hackathon challenge.",
+      "importance": 0.85,
+      "level": 3,
+      "parent_id": "proposal_profile",
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_chunks": [],
+      "source_excerpt": "Ministry of Fisheries, Animal Husbandry & Dairying"
+    },
+    {
+      "id": "overall_score",
+      "label": "Overall Score",
+      "type": "metric",
+      "description": "An evaluation rating calculated across implementation, hardware cost, presentation, and data parameters.",
+      "importance": 0.85,
+      "level": 3,
+      "parent_id": "proposal_profile",
+      "source_pages": [
+        2
+      ],
+      "source_chunks": [],
+      "source_excerpt": "OVERALL SCORE: 4.8 / 5"
+    },
+    {
+      "id": "value_proposition",
+      "label": "Value Proposition",
+      "type": "subtopic",
+      "description": "Crucial differentiators and competitive advantages of the proposed system.",
+      "importance": 0.9,
+      "level": 2,
+      "parent_id": "project_overview",
+      "source_pages": [
+        2,
+        7
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "low_cost_usp",
+      "label": "Low-Cost USP",
+      "type": "technology",
+      "description": "An extremely affordable physical testing platform designed for local procurement agencies and farmers.",
+      "importance": 0.95,
+      "level": 3,
+      "parent_id": "value_proposition",
+      "source_pages": [
+        2,
+        3
+      ],
+      "source_chunks": [],
+      "source_excerpt": "Complete plug-and-play solution under INR 1500."
+    },
+    {
+      "id": "offline_first_design",
+      "label": "Offline-First Design",
+      "type": "method",
+      "description": "A design philosophy implemented to ensure the testing system operates in environments without stable connectivity.",
+      "importance": 0.85,
+      "level": 3,
+      "parent_id": "value_proposition",
+      "source_pages": [
+        4,
+        7
+      ],
+      "source_chunks": [],
+      "source_excerpt": "Designed offline-first, critical for rural deployment"
+    },
+    {
+      "id": "hardware_architecture",
+      "label": "Hardware Architecture and Design",
+      "type": "topic",
+      "description": "Physical construction components, bill of materials, and device control firmware.",
+      "importance": 0.95,
+      "level": 1,
+      "parent_id": "root_3aff9a5d_b0fc_429c_935a_e462452f43a3",
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "hardware_bom",
+      "label": "Hardware Bill of Materials",
+      "type": "subtopic",
+      "description": "The specific components, unit quantities, and pricing structures required to construct the testing prototype.",
+      "importance": 0.9,
+      "level": 2,
+      "parent_id": "hardware_architecture",
+      "source_pages": [
+        3
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "esp32_cam",
+      "label": "ESP32-CAM",
+      "type": "technology",
+      "description": "An ultra-affordable microcontroller with integrated WiFi and camera functionality for local image ingestion.",
+      "importance": 0.95,
+      "level": 3,
+      "parent_id": "hardware_bom",
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": [],
+      "source_excerpt": "ESP32-CAM (OV2640 2MP)"
+    },
+    {
+      "id": "inspection_box",
+      "label": "Custom MDF/Acrylic Inspection Box",
+      "type": "technology",
+      "description": "A low-cost custom housing used to maintain lab-grade uniformity during physical capture processes.",
+      "importance": 0.9,
+      "level": 3,
+      "parent_id": "hardware_bom",
+      "source_pages": [
+        2,
+        3
+      ],
+      "source_chunks": [],
+      "source_excerpt": "Custom MDF/Acrylic Inspection Box"
+    },
+    {
+      "id": "ws2812b_led",
+      "label": "WS2812B White LED Strip",
+      "type": "technology",
+      "description": "White LED strip used to deliver consistent, diffuse illumination within the physical inspection box.",
+      "importance": 0.8,
+      "level": 3,
+      "parent_id": "hardware_bom",
+      "source_pages": [
+        3
+      ],
+      "source_chunks": [],
+      "source_excerpt": "WS2812B White LED Strip"
+    },
+    {
+      "id": "hardware_integration",
+      "label": "Hardware Firmware & Control",
+      "type": "subtopic",
+      "description": "Methods and protocols for managing hardware configurations and transmitting captured feed details.",
+      "importance": 0.85,
+      "level": 2,
+      "parent_id": "hardware_architecture",
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "led_pwm_control",
+      "label": "LED PWM Brightness Control",
+      "type": "process",
+      "description": "Hardware-level technique used to modulate light levels inside the sample environment for optimal imaging.",
+      "importance": 0.75,
+      "level": 3,
+      "parent_id": "hardware_integration",
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": [],
+      "source_excerpt": "LED PWM brightness control"
+    },
+    {
+      "id": "rest_api_upload",
+      "label": "REST API Image Upload",
+      "type": "process",
+      "description": "Network operation utilized by the ESP32-CAM over WiFi to deliver captured imagery directly to back-end endpoints.",
+      "importance": 0.8,
+      "level": 3,
+      "parent_id": "hardware_integration",
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": [],
+      "source_excerpt": "REST API image upload"
+    },
+    {
+      "id": "software_and_ai_pipeline",
+      "label": "Software & AI/ML Pipeline",
+      "type": "topic",
+      "description": "The complete digital infrastructure, framework components, data routing systems, and computer vision architectures.",
+      "importance": 0.95,
+      "level": 1,
+      "parent_id": "root_3aff9a5d_b0fc_429c_935a_e462452f43a3",
+      "source_pages": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "software_stack",
+      "label": "Software Stack & Backend",
+      "type": "subtopic",
+      "description": "The structural interfaces, local queuing tools, and server systems that organize data flow.",
+      "importance": 0.9,
+      "level": 2,
+      "parent_id": "software_and_ai_pipeline",
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "farmer_pwa",
+      "label": "Farmer Progressive Web App",
+      "type": "technology",
+      "description": "The consumer-facing application offering offline functionality, scan tracking, and localized results.",
+      "importance": 0.9,
+      "level": 3,
+      "parent_id": "software_stack",
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": [],
+      "source_excerpt": "Farmer PWA with image upload, results, scan history"
+    },
+    {
+      "id": "fastapi_backend",
+      "label": "FastAPI Backend",
+      "type": "technology",
+      "description": "High-performance Python-based API server processing core logical transactions and managing asset routing.",
+      "importance": 0.85,
+      "level": 3,
+      "parent_id": "software_stack",
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": [],
+      "source_excerpt": "FastAPI backend, image pipeline, database, auth"
+    },
+    {
+      "id": "celery_queue",
+      "label": "Celery Async Image Queue",
+      "type": "technology",
+      "description": "A task worker framework facilitating asynchronous image analysis requests to avoid pipeline blocking.",
+      "importance": 0.8,
+      "level": 3,
+      "parent_id": "software_stack",
+      "source_pages": [
+        4
+      ],
+      "source_chunks": [],
+      "source_excerpt": "Celery (async image queue)"
+    },
+    {
+      "id": "ai_ml_models",
+      "label": "AI/ML Models & Analytics",
+      "type": "subtopic",
+      "description": "Deep learning models and optimization frameworks that assess and grade physical crop metrics.",
+      "importance": 0.95,
+      "level": 2,
+      "parent_id": "software_and_ai_pipeline",
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "yolov8_detector",
+      "label": "YOLOv8 Object Detector",
+      "type": "technology",
+      "description": "Real-time deep learning architecture dedicated to localized detection of contaminants and foreign particles.",
+      "importance": 0.95,
+      "level": 3,
+      "parent_id": "ai_ml_models",
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": [],
+      "source_excerpt": "YOLOv8 (foreign particle detection)"
+    },
+    {
+      "id": "efficientnet_classifier",
+      "label": "EfficientNet Quality Classifier",
+      "type": "technology",
+      "description": "Convolutional Neural Network designed to classify agricultural products into tiered quality bands.",
+      "importance": 0.95,
+      "level": 3,
+      "parent_id": "ai_ml_models",
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": [],
+      "source_excerpt": "EfficientNet / ResNet-50 (quality grading)"
+    },
+    {
+      "id": "onnx_runtime",
+      "label": "ONNX Runtime Deployment",
+      "type": "technology",
+      "description": "An optimization engine allowing hardware-independent edge execution of trained neural models.",
+      "importance": 0.85,
+      "level": 3,
+      "parent_id": "ai_ml_models",
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": [],
+      "source_excerpt": "ONNX Runtime (edge deploy)"
+    },
+    {
+      "id": "training_datasets",
+      "label": "Training Datasets",
+      "type": "subtopic",
+      "description": "Data repositories and regulatory baselines for training the computer vision models.",
+      "importance": 0.85,
+      "level": 2,
+      "parent_id": "software_and_ai_pipeline",
+      "source_pages": [
+        6
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "icar_feed_standards",
+      "label": "ICAR Feed Standards",
+      "type": "entity",
+      "description": "The formal quality metrics and grading criteria authorized by the Indian Council of Agricultural Research.",
+      "importance": 0.85,
+      "level": 3,
+      "parent_id": "training_datasets",
+      "source_pages": [
+        6
+      ],
+      "source_chunks": [],
+      "source_excerpt": "ICAR Feed Standards"
+    },
+    {
+      "id": "custom_training_data",
+      "label": "Custom Training Data",
+      "type": "entity",
+      "description": "Self-collected imaging datasets produced locally inside the specialized hardware container.",
+      "importance": 0.8,
+      "level": 3,
+      "parent_id": "training_datasets",
+      "source_pages": [
+        6
+      ],
+      "source_chunks": [],
+      "source_excerpt": "Custom Training Data"
+    },
+    {
+      "id": "execution_and_risk_management",
+      "label": "Execution, Risk and Presentation Strategy",
+      "type": "topic",
+      "description": "Timeline mapping, physical environmental adaptations, and criteria for delivering the final pitch.",
+      "importance": 0.85,
+      "level": 1,
+      "parent_id": "root_3aff9a5d_b0fc_429c_935a_e462452f43a3",
+      "source_pages": [
+        3,
+        6,
+        7
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "project_timeline",
+      "label": "Project Timeline",
+      "type": "subtopic",
+      "description": "An accelerated phase planning method dividing the rapid development lifecycle.",
+      "importance": 0.8,
+      "level": 2,
+      "parent_id": "execution_and_risk_management",
+      "source_pages": [
+        6
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "eight_day_sprint",
+      "label": "8-Day Implementation Sprint",
+      "type": "process",
+      "description": "The rapid roadmap defining physical construction, model training, program integration, and live demonstration prep.",
+      "importance": 0.85,
+      "level": 3,
+      "parent_id": "project_timeline",
+      "source_pages": [
+        6
+      ],
+      "source_chunks": [],
+      "source_excerpt": "Sprint plan from today until the presentation"
+    },
+    {
+      "id": "risk_mitigation",
+      "label": "Risk Assessment & Mitigation",
+      "type": "subtopic",
+      "description": "Strategic defenses built into the proposal to offset functional threats such as illumination issues or low training data.",
+      "importance": 0.85,
+      "level": 2,
+      "parent_id": "execution_and_risk_management",
+      "source_pages": [
+        6
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "controlled_lighting",
+      "label": "Controlled Hardware Lighting",
+      "type": "method",
+      "description": "The physical process of sealing the test specimen in a dark enclosure to mitigate natural lighting inconsistencies.",
+      "importance": 0.9,
+      "level": 3,
+      "parent_id": "risk_mitigation",
+      "source_pages": [
+        6
+      ],
+      "source_chunks": [],
+      "source_excerpt": "Controlled lighting inside custom hardware box"
+    }
+  ],
+  "edges": [
+    {
+      "source": "root_3aff9a5d_b0fc_429c_935a_e462452f43a3",
+      "target": "project_overview",
+      "relationship": "contains_topic",
+      "confidence": 1.0,
+      "is_hierarchical": true,
+      "source_pages": [
+        1,
+        2,
+        7
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "project_overview",
+      "target": "proposal_profile",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "proposal_profile",
+      "target": "sih26111_problem_statement",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "proposal_profile",
+      "target": "ministry_of_dairying",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "proposal_profile",
+      "target": "overall_score",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        2
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "project_overview",
+      "target": "value_proposition",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        2,
+        7
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "value_proposition",
+      "target": "low_cost_usp",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        2,
+        3
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "value_proposition",
+      "target": "offline_first_design",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        4,
+        7
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "root_3aff9a5d_b0fc_429c_935a_e462452f43a3",
+      "target": "hardware_architecture",
+      "relationship": "contains_topic",
+      "confidence": 1.0,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "hardware_architecture",
+      "target": "hardware_bom",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        3
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "hardware_bom",
+      "target": "esp32_cam",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "hardware_bom",
+      "target": "inspection_box",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        2,
+        3
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "hardware_bom",
+      "target": "ws2812b_led",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        3
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "hardware_architecture",
+      "target": "hardware_integration",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "hardware_integration",
+      "target": "led_pwm_control",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "hardware_integration",
+      "target": "rest_api_upload",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "root_3aff9a5d_b0fc_429c_935a_e462452f43a3",
+      "target": "software_and_ai_pipeline",
+      "relationship": "contains_topic",
+      "confidence": 1.0,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "software_and_ai_pipeline",
+      "target": "software_stack",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "software_stack",
+      "target": "farmer_pwa",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "software_stack",
+      "target": "fastapi_backend",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "software_stack",
+      "target": "celery_queue",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        4
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "software_and_ai_pipeline",
+      "target": "ai_ml_models",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "ai_ml_models",
+      "target": "yolov8_detector",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "ai_ml_models",
+      "target": "efficientnet_classifier",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "ai_ml_models",
+      "target": "onnx_runtime",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "software_and_ai_pipeline",
+      "target": "training_datasets",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "training_datasets",
+      "target": "icar_feed_standards",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "training_datasets",
+      "target": "custom_training_data",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "root_3aff9a5d_b0fc_429c_935a_e462452f43a3",
+      "target": "execution_and_risk_management",
+      "relationship": "contains_topic",
+      "confidence": 1.0,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        6,
+        7
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "execution_and_risk_management",
+      "target": "project_timeline",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "project_timeline",
+      "target": "eight_day_sprint",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "execution_and_risk_management",
+      "target": "risk_mitigation",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "risk_mitigation",
+      "target": "controlled_lighting",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "esp32_cam",
+      "target": "rest_api_upload",
+      "relationship": "uses",
+      "confidence": 0.95,
+      "is_hierarchical": false,
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "rest_api_upload",
+      "target": "fastapi_backend",
+      "relationship": "uses",
+      "confidence": 0.95,
+      "is_hierarchical": false,
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "fastapi_backend",
+      "target": "celery_queue",
+      "relationship": "uses",
+      "confidence": 0.9,
+      "is_hierarchical": false,
+      "source_pages": [
+        4
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "celery_queue",
+      "target": "yolov8_detector",
+      "relationship": "depends_on",
+      "confidence": 0.88,
+      "is_hierarchical": false,
+      "source_pages": [
+        4,
+        5
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "celery_queue",
+      "target": "efficientnet_classifier",
+      "relationship": "depends_on",
+      "confidence": 0.88,
+      "is_hierarchical": false,
+      "source_pages": [
+        4,
+        5
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "yolov8_detector",
+      "target": "onnx_runtime",
+      "relationship": "implemented_by",
+      "confidence": 0.92,
+      "is_hierarchical": false,
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "efficientnet_classifier",
+      "target": "onnx_runtime",
+      "relationship": "implemented_by",
+      "confidence": 0.92,
+      "is_hierarchical": false,
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "farmer_pwa",
+      "target": "offline_first_design",
+      "relationship": "uses",
+      "confidence": 0.9,
+      "is_hierarchical": false,
+      "source_pages": [
+        4,
+        7
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "controlled_lighting",
+      "target": "ws2812b_led",
+      "relationship": "uses",
+      "confidence": 0.95,
+      "is_hierarchical": false,
+      "source_pages": [
+        3,
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "controlled_lighting",
+      "target": "inspection_box",
+      "relationship": "uses",
+      "confidence": 0.95,
+      "is_hierarchical": false,
+      "source_pages": [
+        2,
+        3,
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "yolov8_detector",
+      "target": "custom_training_data",
+      "relationship": "trained_using",
+      "confidence": 0.9,
+      "is_hierarchical": false,
+      "source_pages": [
+        3,
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "efficientnet_classifier",
+      "target": "custom_training_data",
+      "relationship": "trained_using",
+      "confidence": 0.9,
+      "is_hierarchical": false,
+      "source_pages": [
+        3,
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "efficientnet_classifier",
+      "target": "icar_feed_standards",
+      "relationship": "depends_on",
+      "confidence": 0.85,
+      "is_hierarchical": false,
+      "source_pages": [
+        4,
+        6
+      ],
+      "source_chunks": []
+    }
+  ],
+  "levels_available": [
+    0,
+    1,
+    2,
+    3
+  ]
+}

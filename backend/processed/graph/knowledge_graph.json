@@ -1,0 +1,914 @@
+{
+  "document": {
+    "id": "active_document",
+    "title": "Smart AI-Enabled Rapid Feed and Silage Quality Testing System (SIH26111 Proposal)",
+    "domain": "Agriculture AI / FoodTech & IoT",
+    "summary": "This document outlines a proposal for Smart India Hackathon 2026 proposing an ultra-low-cost, plug-and-play AI and IoT system for rapid feed and silage quality evaluation. The solution pairs a custom INR 1,500 imaging hardware box with computer vision models and an offline-first PWA to deliver standardized grading for rural procurement.",
+    "total_pages": 7
+  },
+  "nodes": [
+    {
+      "id": "root_active_document",
+      "label": "Smart AI-Enabled Rapid Feed and Silage Quality Testing System (SIH26111 Proposal)",
+      "type": "root",
+      "description": "This document outlines a proposal for Smart India Hackathon 2026 proposing an ultra-low-cost, plug-and-play AI and IoT system for rapid feed and silage quality evaluation. The solution pairs a custom INR 1,500 imaging hardware box with computer vision models and an offline-first PWA to deliver standardized grading for rural procurement.",
+      "importance": 1.0,
+      "level": 0,
+      "parent_id": null,
+      "source_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_chunks": [],
+      "source_excerpt": "This document outlines a proposal for Smart India Hackathon 2026 proposing an ultra-low-cost, plug-and-play AI and IoT system for rapid feed and silage quality evaluation. The solution pairs a custom INR 1,500 imaging hardware box with computer vision models and an offline-first PWA to deliver standardized grading for rural procurement."
+    },
+    {
+      "id": "project_overview_and_viability",
+      "label": "Project Overview and Feasibility Evaluation",
+      "type": "topic",
+      "description": "Foundational proposal details, institutional problem context, evaluation scores, and unique selling proposition.",
+      "importance": 0.85,
+      "level": 1,
+      "parent_id": "root_active_document",
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "hackathon_metadata",
+      "label": "Hackathon Context & Proposal Specifications",
+      "type": "subtopic",
+      "description": "Details regarding the competition, organization, theme, and team structure.",
+      "importance": 0.75,
+      "level": 2,
+      "parent_id": "project_overview_and_viability",
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "sih26111_problem_statement",
+      "label": "Problem Statement SIH26111",
+      "type": "definition",
+      "description": "Smart AI-Enabled Rapid Feed and Silage Quality Testing System issued for SIH 2026.",
+      "importance": 0.9,
+      "level": 3,
+      "parent_id": "hackathon_metadata",
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_chunks": [],
+      "source_excerpt": "Smart AI-Enabled Rapid Feed and Silage Quality Testing System"
+    },
+    {
+      "id": "ministry_fisheries_animal_husbandry_dairying",
+      "label": "Ministry of Fisheries, Animal Husbandry & Dairying",
+      "type": "organization",
+      "description": "The governmental department posting the hackathon problem challenge under Agriculture, FoodTech & Rural Development.",
+      "importance": 0.8,
+      "level": 3,
+      "parent_id": "hackathon_metadata",
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_chunks": [],
+      "source_excerpt": "Ministry of Fisheries, Animal Husbandry & Dairying"
+    },
+    {
+      "id": "proposal_evaluation_and_usp",
+      "label": "Proposal Evaluation & USP",
+      "type": "subtopic",
+      "description": "Internal scoring matrix and key commercial advantages of the proposed testing system.",
+      "importance": 0.85,
+      "level": 2,
+      "parent_id": "project_overview_and_viability",
+      "source_pages": [
+        2
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "overall_viability_score",
+      "label": "Overall Score 4.8/5",
+      "type": "metric",
+      "description": "Combined feasibility, hardware affordability, win probability, presentation impact, and data availability evaluation score.",
+      "importance": 0.7,
+      "level": 3,
+      "parent_id": "proposal_evaluation_and_usp",
+      "source_pages": [
+        2
+      ],
+      "source_chunks": [],
+      "source_excerpt": "OVERALL SCORE: 4.8 / 5"
+    },
+    {
+      "id": "inr_1500_plug_and_play_usp",
+      "label": "Ultra-Low-Cost Plug-and-Play USP",
+      "type": "concept",
+      "description": "Delivering lab-grade image consistency at field-level cost under INR 1,500 with standardized quality certification.",
+      "importance": 0.95,
+      "level": 3,
+      "parent_id": "proposal_evaluation_and_usp",
+      "source_pages": [
+        2,
+        3
+      ],
+      "source_chunks": [],
+      "source_excerpt": "Complete plug-and-play solution under INR 1500"
+    },
+    {
+      "id": "hardware_architecture_and_bom",
+      "label": "Hardware Architecture and Bill of Materials",
+      "type": "topic",
+      "description": "Physical imaging enclosure, optical components, embedded controllers, and low-cost component budgeting.",
+      "importance": 0.9,
+      "level": 1,
+      "parent_id": "root_active_document",
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "hardware_bill_of_materials",
+      "label": "Hardware Components and Budget Breakdown",
+      "type": "subtopic",
+      "description": "List and unit pricing of all physical items utilized in the inspection system, totaling INR 1,500.",
+      "importance": 0.85,
+      "level": 2,
+      "parent_id": "hardware_architecture_and_bom",
+      "source_pages": [
+        3
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "esp32_cam_module",
+      "label": "ESP32-CAM (OV2640)",
+      "type": "technology",
+      "description": "Microcontroller module with an integrated 2MP OV2640 camera and WiFi connectivity for automated image capture and upload.",
+      "importance": 0.95,
+      "level": 3,
+      "parent_id": "hardware_bill_of_materials",
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": [],
+      "source_excerpt": "ESP32-CAM (OV2640 2MP) Camera with WiFi for image capture"
+    },
+    {
+      "id": "custom_mdf_acrylic_box",
+      "label": "Custom MDF/Acrylic Inspection Box",
+      "type": "technology",
+      "description": "Controlled physical chamber designed to eliminate external lighting variance for standardized sample capture.",
+      "importance": 0.85,
+      "level": 3,
+      "parent_id": "hardware_bill_of_materials",
+      "source_pages": [
+        3,
+        6
+      ],
+      "source_chunks": [],
+      "source_excerpt": "Controlled environment for consistent shots"
+    },
+    {
+      "id": "ws2812b_led_lighting",
+      "label": "WS2812B White LED Strips",
+      "type": "technology",
+      "description": "Diffused internal lighting source controlled via PWM to guarantee uniform, repeatable luminance.",
+      "importance": 0.8,
+      "level": 3,
+      "parent_id": "hardware_bill_of_materials",
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": [],
+      "source_excerpt": "WS2812B White LED Strip (30cm) Uniform diffused lighting"
+    },
+    {
+      "id": "sample_positioning_tray",
+      "label": "3D Printed Sample Tray",
+      "type": "technology",
+      "description": "Custom fabricated tray ensuring standardized positioning of feed and silage during optical scanning.",
+      "importance": 0.75,
+      "level": 3,
+      "parent_id": "hardware_bill_of_materials",
+      "source_pages": [
+        3
+      ],
+      "source_chunks": [],
+      "source_excerpt": "3D Printed Sample Tray Standardized sample positioning"
+    },
+    {
+      "id": "software_and_ai_stack",
+      "label": "Software Engineering and Artificial Intelligence Pipeline",
+      "type": "topic",
+      "description": "The integrated end-to-end data pipeline spanning embedded firmware, cloud backend, machine vision inference, and farmer PWA.",
+      "importance": 0.95,
+      "level": 1,
+      "parent_id": "root_active_document",
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "computer_vision_and_ml",
+      "label": "Computer Vision & Quality Grading Models",
+      "type": "subtopic",
+      "description": "Machine learning architectures responsible for contaminant detection and compositional quality grading.",
+      "importance": 0.9,
+      "level": 2,
+      "parent_id": "software_and_ai_stack",
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "yolov8_particle_detection",
+      "label": "YOLOv8 Contaminant Detection",
+      "type": "technology",
+      "description": "Object detection model deployed to recognize and localize foreign particles, weeds, and contaminants in feed.",
+      "importance": 0.9,
+      "level": 3,
+      "parent_id": "computer_vision_and_ml",
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": [],
+      "source_excerpt": "YOLOv8 (foreign particle detection)"
+    },
+    {
+      "id": "efficientnet_quality_grading",
+      "label": "EfficientNet Quality Classifier",
+      "type": "technology",
+      "description": "Deep neural network classifier that categorizes feed and silage into standardized A/B/C quality grades.",
+      "importance": 0.9,
+      "level": 3,
+      "parent_id": "computer_vision_and_ml",
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": [],
+      "source_excerpt": "EfficientNet / ResNet-50 (quality grading)"
+    },
+    {
+      "id": "onnx_runtime_deployment",
+      "label": "ONNX Runtime Export",
+      "type": "technology",
+      "description": "Open Neural Network Exchange runtime utilized to optimize models for efficient edge and server execution.",
+      "importance": 0.8,
+      "level": 3,
+      "parent_id": "computer_vision_and_ml",
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": [],
+      "source_excerpt": "ONNX Runtime (edge deploy)"
+    },
+    {
+      "id": "web_and_backend_architecture",
+      "label": "Web Platform and Asynchronous Backend",
+      "type": "subtopic",
+      "description": "Server-side REST endpoints, asynchronous image processing queues, and user client interfaces.",
+      "importance": 0.85,
+      "level": 2,
+      "parent_id": "software_and_ai_stack",
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "fastapi_backend",
+      "label": "FastAPI Image Processing Backend",
+      "type": "technology",
+      "description": "Python web framework handling hardware image ingestion, REST endpoints, authentication, and database writes.",
+      "importance": 0.85,
+      "level": 3,
+      "parent_id": "web_and_backend_architecture",
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": [],
+      "source_excerpt": "FastAPI backend, image pipeline, database, auth"
+    },
+    {
+      "id": "farmer_pwa",
+      "label": "Progressive Web App (PWA) with i18n",
+      "type": "technology",
+      "description": "Offline-capable React/Next.js client interface with multi-language (Hindi and regional) support for rural farmers.",
+      "importance": 0.85,
+      "level": 3,
+      "parent_id": "web_and_backend_architecture",
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": [],
+      "source_excerpt": "PWA for offline farmer access i18n (Hindi, regional)"
+    },
+    {
+      "id": "data_engineering_and_implementation",
+      "label": "Data Engineering, Project Execution, and Presentation",
+      "type": "topic",
+      "description": "Training dataset provenance, 8-day sprint plan, operational risk mitigations, and pitch delivery strategy.",
+      "importance": 0.8,
+      "level": 1,
+      "parent_id": "root_active_document",
+      "source_pages": [
+        6,
+        7
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "training_data_and_standards",
+      "label": "Dataset Sourcing & Benchmark Standards",
+      "type": "subtopic",
+      "description": "External and proprietary datasets enabling transfer learning and compliance with national/international feed regulations.",
+      "importance": 0.8,
+      "level": 2,
+      "parent_id": "data_engineering_and_implementation",
+      "source_pages": [
+        6
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "icar_fao_standards",
+      "label": "ICAR & FAO Feed Standards",
+      "type": "definition",
+      "description": "Governmental and international guidelines defining feed composition thresholds and grading criteria.",
+      "importance": 0.8,
+      "level": 3,
+      "parent_id": "training_data_and_standards",
+      "source_pages": [
+        6
+      ],
+      "source_chunks": [],
+      "source_excerpt": "Quality parameters and grading criteria"
+    },
+    {
+      "id": "custom_hardware_dataset",
+      "label": "Custom Captured Box Dataset",
+      "type": "technology",
+      "description": "Self-collected repository of 200-500 images per quality class taken within the standardized hardware chamber.",
+      "importance": 0.75,
+      "level": 3,
+      "parent_id": "training_data_and_standards",
+      "source_pages": [
+        6
+      ],
+      "source_chunks": [],
+      "source_excerpt": "200-500 images per class from HW box"
+    },
+    {
+      "id": "project_risks_and_mitigation",
+      "label": "Risk Assessment and Mitigation",
+      "type": "subtopic",
+      "description": "Identification of field hazards and operational hurdles paired with technical countermeasures.",
+      "importance": 0.75,
+      "level": 2,
+      "parent_id": "data_engineering_and_implementation",
+      "source_pages": [
+        6
+      ],
+      "source_chunks": [],
+      "source_excerpt": null
+    },
+    {
+      "id": "lighting_inconsistency_mitigation",
+      "label": "Lighting Variance Mitigation",
+      "type": "method",
+      "description": "Counteracting environmental illumination changes by isolating samples within an enclosed chamber with internal LEDs.",
+      "importance": 0.75,
+      "level": 3,
+      "parent_id": "project_risks_and_mitigation",
+      "source_pages": [
+        6
+      ],
+      "source_chunks": [],
+      "source_excerpt": "Controlled lighting inside custom hardware box"
+    },
+    {
+      "id": "digital_literacy_mitigation",
+      "label": "One-Button Farmer Interface",
+      "type": "method",
+      "description": "Lowering barriers to adoption in rural areas using single-action capture and voice-guided application prompts.",
+      "importance": 0.7,
+      "level": 3,
+      "parent_id": "project_risks_and_mitigation",
+      "source_pages": [
+        6
+      ],
+      "source_chunks": [],
+      "source_excerpt": "One-button capture, voice-guided instructions"
+    }
+  ],
+  "edges": [
+    {
+      "source": "root_active_document",
+      "target": "project_overview_and_viability",
+      "relationship": "contains_topic",
+      "confidence": 1.0,
+      "is_hierarchical": true,
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "project_overview_and_viability",
+      "target": "hackathon_metadata",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "hackathon_metadata",
+      "target": "sih26111_problem_statement",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "hackathon_metadata",
+      "target": "ministry_fisheries_animal_husbandry_dairying",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "project_overview_and_viability",
+      "target": "proposal_evaluation_and_usp",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        2
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "proposal_evaluation_and_usp",
+      "target": "overall_viability_score",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        2
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "proposal_evaluation_and_usp",
+      "target": "inr_1500_plug_and_play_usp",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        2,
+        3
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "root_active_document",
+      "target": "hardware_architecture_and_bom",
+      "relationship": "contains_topic",
+      "confidence": 1.0,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "hardware_architecture_and_bom",
+      "target": "hardware_bill_of_materials",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        3
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "hardware_bill_of_materials",
+      "target": "esp32_cam_module",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "hardware_bill_of_materials",
+      "target": "custom_mdf_acrylic_box",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "hardware_bill_of_materials",
+      "target": "ws2812b_led_lighting",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "hardware_bill_of_materials",
+      "target": "sample_positioning_tray",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        3
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "root_active_document",
+      "target": "software_and_ai_stack",
+      "relationship": "contains_topic",
+      "confidence": 1.0,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "software_and_ai_stack",
+      "target": "computer_vision_and_ml",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "computer_vision_and_ml",
+      "target": "yolov8_particle_detection",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "computer_vision_and_ml",
+      "target": "efficientnet_quality_grading",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "computer_vision_and_ml",
+      "target": "onnx_runtime_deployment",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "software_and_ai_stack",
+      "target": "web_and_backend_architecture",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "web_and_backend_architecture",
+      "target": "fastapi_backend",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "web_and_backend_architecture",
+      "target": "farmer_pwa",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "root_active_document",
+      "target": "data_engineering_and_implementation",
+      "relationship": "contains_topic",
+      "confidence": 1.0,
+      "is_hierarchical": true,
+      "source_pages": [
+        6,
+        7
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "data_engineering_and_implementation",
+      "target": "training_data_and_standards",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "training_data_and_standards",
+      "target": "icar_fao_standards",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "training_data_and_standards",
+      "target": "custom_hardware_dataset",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "data_engineering_and_implementation",
+      "target": "project_risks_and_mitigation",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "project_risks_and_mitigation",
+      "target": "lighting_inconsistency_mitigation",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "project_risks_and_mitigation",
+      "target": "digital_literacy_mitigation",
+      "relationship": "includes",
+      "confidence": 0.9,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "esp32_cam_module",
+      "target": "custom_mdf_acrylic_box",
+      "relationship": "depends_on",
+      "confidence": 0.95,
+      "is_hierarchical": false,
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "esp32_cam_module",
+      "target": "fastapi_backend",
+      "relationship": "uses",
+      "confidence": 0.96,
+      "is_hierarchical": false,
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "fastapi_backend",
+      "target": "yolov8_particle_detection",
+      "relationship": "uses",
+      "confidence": 0.94,
+      "is_hierarchical": false,
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "fastapi_backend",
+      "target": "efficientnet_quality_grading",
+      "relationship": "uses",
+      "confidence": 0.94,
+      "is_hierarchical": false,
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "farmer_pwa",
+      "target": "fastapi_backend",
+      "relationship": "depends_on",
+      "confidence": 0.92,
+      "is_hierarchical": false,
+      "source_pages": [
+        4,
+        5
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "custom_mdf_acrylic_box",
+      "target": "lighting_inconsistency_mitigation",
+      "relationship": "implemented_by",
+      "confidence": 0.9,
+      "is_hierarchical": false,
+      "source_pages": [
+        3,
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "efficientnet_quality_grading",
+      "target": "icar_fao_standards",
+      "relationship": "trained_using",
+      "confidence": 0.88,
+      "is_hierarchical": false,
+      "source_pages": [
+        3,
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "efficientnet_quality_grading",
+      "target": "onnx_runtime_deployment",
+      "relationship": "implemented_by",
+      "confidence": 0.91,
+      "is_hierarchical": false,
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "farmer_pwa",
+      "target": "digital_literacy_mitigation",
+      "relationship": "implemented_by",
+      "confidence": 0.85,
+      "is_hierarchical": false,
+      "source_pages": [
+        4,
+        6
+      ],
+      "source_chunks": []
+    },
+    {
+      "source": "custom_hardware_dataset",
+      "target": "esp32_cam_module",
+      "relationship": "produces",
+      "confidence": 0.9,
+      "is_hierarchical": false,
+      "source_pages": [
+        3,
+        6
+      ],
+      "source_chunks": []
+    }
+  ],
+  "levels_available": [
+    0,
+    1,
+    2,
+    3
+  ]
+}

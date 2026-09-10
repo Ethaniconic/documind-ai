@@ -24,15 +24,21 @@ def chat(request: ChatRequest):
     llm_service = LLMService()
     chat_service = ChatService(retriever, llm_service)
 
-    result = chat_service.chat(request.query, request.document_id)
+    result = chat_service.chat(request.query, request.document_id, request.user_id)
 
     # Automatically persist conversation flow: User message -> AI response -> PostgreSQL
     if request.chat_id:
         try:
+            import json
             history = ChatHistoryService()
             history.save_message(request.chat_id, "user", request.query)
-            history.save_message(request.chat_id, "assistant", result["answer"])
+
+            content_to_save = result["answer"]
+            if result.get("sources"):
+                content_to_save += f"\n\n<!-- SOURCES:{json.dumps(result['sources'])} -->"
+            history.save_message(request.chat_id, "assistant", content_to_save)
         except Exception as e:
             print(f"Error saving chat message to database: {e}")
+
 
     return result

@@ -22,5 +22,6 @@ def remove_duplicates(results):
 def build_context(results):
     context = ""
     for result in results:
-        context += f"Page {result.page_number}:\n{result.text}\n\n"
-    return context.strip()
+        doc = getattr(result, "document_id", "Doc")
+        context += f"[Document: {doc}, Page {result.page_number}]:\n{result.text}\n\n"
+    return context.strip()

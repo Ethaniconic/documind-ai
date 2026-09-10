@@ -1,0 +1,1081 @@
+{
+  "document": {
+    "id": "a5e4abee-86f8-4e87-acbc-b8b40d41a70d",
+    "title": "Smart AI-Enabled Rapid Feed and Silage Quality Testing System",
+    "domain": "Agriculture, FoodTech & Rural Development",
+    "summary": "Proposal report SIH26111 detailing an integrated hardware-software solution for low-cost, rapid quality testing and grading of animal feed and silage using computer vision and edge computing.",
+    "total_pages": 7
+  },
+  "nodes": [
+    {
+      "id": "sih26111_feed_and_silage_testing_system",
+      "label": "Smart AI-Enabled Rapid Feed and Silage Quality Testing System",
+      "type": "root",
+      "description": "Root proposal for SIH 2026 problem statement SIH26111 targeting rapid feed and silage quality evaluation for the Ministry of Fisheries, Animal Husbandry & Dairying.",
+      "importance": 0.83,
+      "level": 0,
+      "parent_id": null,
+      "source_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_excerpt": "Smart AI-Enabled Rapid Feed and Silage Quality Testing System"
+    },
+    {
+      "id": "proposal_overview_and_evaluation",
+      "label": "Proposal Overview & Evaluation",
+      "type": "topic",
+      "description": "Project baseline metrics, registration status, evaluation scoring across key criteria, and core Unique Selling Proposition.",
+      "importance": 0.57,
+      "level": 1,
+      "parent_id": "sih26111_feed_and_silage_testing_system",
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_excerpt": "Each problem statement is evaluated on 5 key criteria relevant to your team's strengths and hackathon success"
+    },
+    {
+      "id": "team_structure_and_roles",
+      "label": "Team Structure & Responsibilities",
+      "type": "topic",
+      "description": "Workload distribution and skill sets for the 6-member team covering web development, AI/ML, and hardware engineering.",
+      "importance": 0.54,
+      "level": 1,
+      "parent_id": "sih26111_feed_and_silage_testing_system",
+      "source_pages": [
+        1,
+        3
+      ],
+      "source_excerpt": "Role assignments for balanced workload across all 6 members:"
+    },
+    {
+      "id": "hardware_architecture_and_bom",
+      "label": "Hardware Architecture & Bill of Materials",
+      "type": "topic",
+      "description": "Hardware design specifications, enclosure components, lighting setup, and physical prototype costing totaling INR 1,500.",
+      "importance": 0.6,
+      "level": 1,
+      "parent_id": "sih26111_feed_and_silage_testing_system",
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_excerpt": "Complete plug-and-play solution under INR 1500."
+    },
+    {
+      "id": "software_and_ai_stack",
+      "label": "Software & AI Tech Stack",
+      "type": "topic",
+      "description": "Multi-tier software stack comprising React PWA frontend, FastAPI backend, image queue, and computer vision model inference.",
+      "importance": 0.63,
+      "level": 1,
+      "parent_id": "sih26111_feed_and_silage_testing_system",
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_excerpt": "Complete data flow from hardware sensors through backend to user-facing applications:"
+    },
+    {
+      "id": "datasets_and_training_data",
+      "label": "Datasets & Training Strategy",
+      "type": "topic",
+      "description": "Public standards, government datasets, and self-collected image data sources used to train computer vision models.",
+      "importance": 0.51,
+      "level": 1,
+      "parent_id": "sih26111_feed_and_silage_testing_system",
+      "source_pages": [
+        6
+      ],
+      "source_excerpt": "Publicly available datasets for training and validating AI/ML models:"
+    },
+    {
+      "id": "implementation_roadmap_and_timeline",
+      "label": "Implementation Timeline & Sprint Plan",
+      "type": "topic",
+      "description": "An 8-day development plan covering prototype construction, model training, system integration, and presentation delivery.",
+      "importance": 0.51,
+      "level": 1,
+      "parent_id": "sih26111_feed_and_silage_testing_system",
+      "source_pages": [
+        6
+      ],
+      "source_excerpt": "Sprint plan from today until the presentation:"
+    },
+    {
+      "id": "risk_assessment_and_mitigation",
+      "label": "Risk Assessment & Mitigation Strategies",
+      "type": "topic",
+      "description": "Identified technical and user adoption risks along with engineered solutions to ensure operational stability.",
+      "importance": 0.5,
+      "level": 1,
+      "parent_id": "sih26111_feed_and_silage_testing_system",
+      "source_pages": [
+        6
+      ],
+      "source_excerpt": "Controlled lighting inside custom hardware box"
+    },
+    {
+      "id": "presentation_and_pitch_strategy",
+      "label": "Presentation & Pitch Strategy",
+      "type": "topic",
+      "description": "Structured pitch deck blueprint, live demonstration approach, and key messaging points for hackathon evaluation.",
+      "importance": 0.5,
+      "level": 1,
+      "parent_id": "sih26111_feed_and_silage_testing_system",
+      "source_pages": [
+        7
+      ],
+      "source_excerpt": "Live demo the hardware prototype (judges love tangible solutions)"
+    },
+    {
+      "id": "evaluation_and_win_metrics",
+      "label": "Evaluation Criteria & Proposal USP",
+      "type": "subtopic",
+      "description": "Detailed scoring assessment yielding a 4.8/5 overall score and key competitive advantages.",
+      "importance": 0.57,
+      "level": 2,
+      "parent_id": "proposal_overview_and_evaluation",
+      "source_pages": [
+        2
+      ],
+      "source_excerpt": "OVERALL SCORE: 4.8 / 5"
+    },
+    {
+      "id": "team_role_distribution",
+      "label": "Role Assignments & Key Skills",
+      "type": "subtopic",
+      "description": "Division of tasks among web, AI/ML, and hardware sub-teams.",
+      "importance": 0.56,
+      "level": 2,
+      "parent_id": "team_structure_and_roles",
+      "source_pages": [
+        3
+      ],
+      "source_excerpt": "Team Distribution (6 Members)"
+    },
+    {
+      "id": "hardware_components_and_cost",
+      "label": "Hardware Bill of Materials & Design",
+      "type": "subtopic",
+      "description": "Physical assembly of ESP32-CAM, custom enclosure, diffused lighting, and budget allocation.",
+      "importance": 0.62,
+      "level": 2,
+      "parent_id": "hardware_architecture_and_bom",
+      "source_pages": [
+        3
+      ],
+      "source_excerpt": "Hardware Bill of Materials (Total: INR 1,500)"
+    },
+    {
+      "id": "frontend_and_backend_architecture",
+      "label": "Frontend & Backend Architecture",
+      "type": "subtopic",
+      "description": "System data flow from image capture endpoint to FastAPI, Celery queue, and React user interface.",
+      "importance": 0.6,
+      "level": 2,
+      "parent_id": "software_and_ai_stack",
+      "source_pages": [
+        4,
+        5
+      ],
+      "source_excerpt": "FastAPI backend, image pipeline, database, auth"
+    },
+    {
+      "id": "ai_quality_grading_engine",
+      "label": "AI Quality Grading Pipeline",
+      "type": "subtopic",
+      "description": "Dual-model pipeline utilizing YOLOv8 object detection and EfficientNet classification.",
+      "importance": 0.63,
+      "level": 2,
+      "parent_id": "software_and_ai_stack",
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_excerpt": "YOLO + EfficientNet (Quality Grading)"
+    },
+    {
+      "id": "data_sources_and_standards",
+      "label": "Dataset Sources & Classification Standards",
+      "type": "subtopic",
+      "description": "Reference sources for quality criteria and custom dataset creation.",
+      "importance": 0.51,
+      "level": 2,
+      "parent_id": "datasets_and_training_data",
+      "source_pages": [
+        6
+      ],
+      "source_excerpt": "Available Datasets for Model Training"
+    },
+    {
+      "id": "eight_day_sprint_plan",
+      "label": "8-Day Implementation Sprint",
+      "type": "subtopic",
+      "description": "Phased development timeline spanning initial setup to live demonstration.",
+      "importance": 0.51,
+      "level": 2,
+      "parent_id": "implementation_roadmap_and_timeline",
+      "source_pages": [
+        6
+      ],
+      "source_excerpt": "8-Day Implementation Timeline"
+    },
+    {
+      "id": "project_risks_and_mitigations",
+      "label": "Risk Matrix & Mitigations",
+      "type": "subtopic",
+      "description": "Analysis of operational risks such as lighting variations and digital literacy barriers.",
+      "importance": 0.5,
+      "level": 2,
+      "parent_id": "risk_assessment_and_mitigation",
+      "source_pages": [
+        6
+      ],
+      "source_excerpt": "Risk Assessment & Mitigation"
+    },
+    {
+      "id": "demonstration_and_pitch_plan",
+      "label": "Pitch Execution & Slide Structure",
+      "type": "subtopic",
+      "description": "Strategy for hardware demonstration, slide breakdown, and key pitch framing.",
+      "importance": 0.5,
+      "level": 2,
+      "parent_id": "presentation_and_pitch_strategy",
+      "source_pages": [
+        7
+      ],
+      "source_excerpt": "Recommended Slide Structure"
+    },
+    {
+      "id": "problem_evaluation_criteria",
+      "label": "Problem Evaluation Criteria",
+      "type": "definition",
+      "description": "Assessment scale based on data availability (4/5), implementation feasibility (5/5), hardware affordability (5/5), presentation impact (5/5), and win probability (5/5).",
+      "importance": 0.5,
+      "level": 3,
+      "parent_id": "evaluation_and_win_metrics",
+      "source_pages": [
+        2
+      ],
+      "source_excerpt": "Each problem statement is evaluated on 5 key criteria relevant to your team's strengths and hackathon success"
+    },
+    {
+      "id": "plug_and_play_usp",
+      "label": "Low-Cost Plug-and-Play Solution",
+      "type": "concept",
+      "description": "Complete system priced under INR 1,500 that delivers lab-grade consistency in field settings and produces standardized quality certificates.",
+      "importance": 0.54,
+      "level": 3,
+      "parent_id": "evaluation_and_win_metrics",
+      "source_pages": [
+        2
+      ],
+      "source_excerpt": "The custom imaging box ensures lab-grade consistency at field-level cost, producing standardized quality certificates for procurement agencies."
+    },
+    {
+      "id": "web_development_team",
+      "label": "Web Development Sub-Team",
+      "type": "entity",
+      "description": "Two engineers responsible for React PWA farmer interface with offline support and FastAPI backend with Celery image processing queues.",
+      "importance": 0.51,
+      "level": 3,
+      "parent_id": "team_role_distribution",
+      "source_pages": [
+        3
+      ],
+      "source_excerpt": "Farmer PWA with image upload, results, scan history"
+    },
+    {
+      "id": "aiml_development_team",
+      "label": "AI/ML Development Sub-Team",
+      "type": "entity",
+      "description": "Two engineers tasked with training YOLOv8 for foreign particle detection and EfficientNet for quality grading, exporting models via ONNX runtime.",
+      "importance": 0.54,
+      "level": 3,
+      "parent_id": "team_role_distribution",
+      "source_pages": [
+        3
+      ],
+      "source_excerpt": "Train YOLOv8 for contaminant detection in feed"
+    },
+    {
+      "id": "hardware_engineering_team",
+      "label": "Hardware Engineering Sub-Team",
+      "type": "entity",
+      "description": "Two engineers dedicated to ESP32-CAM firmware development, REST API upload integration, LED PWM control, and 3D printing sample trays.",
+      "importance": 0.54,
+      "level": 3,
+      "parent_id": "team_role_distribution",
+      "source_pages": [
+        3
+      ],
+      "source_excerpt": "ESP32-CAM firmware: auto-capture, WiFi upload, LED ctrl"
+    },
+    {
+      "id": "esp32_cam_module",
+      "label": "ESP32-CAM (OV2640 2MP)",
+      "type": "technology",
+      "description": "Microcontroller with integrated 2MP camera and WiFi module costing INR 450, serving as the image capture node.",
+      "importance": 0.65,
+      "level": 3,
+      "parent_id": "hardware_components_and_cost",
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_excerpt": "ESP32-CAM (OV2640 2MP) - Camera with WiFi for image capture"
+    },
+    {
+      "id": "custom_inspection_box",
+      "label": "Custom MDF/Acrylic Inspection Box",
+      "type": "technology",
+      "description": "Physical enclosure costing INR 300 providing a controlled ambient lighting environment and standardized sample placement.",
+      "importance": 0.68,
+      "level": 3,
+      "parent_id": "hardware_components_and_cost",
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_excerpt": "Controlled environment for consistent shots"
+    },
+    {
+      "id": "ws2812b_led_strip",
+      "label": "WS2812B White LED Strip",
+      "type": "technology",
+      "description": "Twin 30cm white LED strips costing INR 150 providing uniform diffused lighting within the inspection enclosure.",
+      "importance": 0.5,
+      "level": 3,
+      "parent_id": "hardware_components_and_cost",
+      "source_pages": [
+        3
+      ],
+      "source_excerpt": "WS2812B White LED Strip (30cm) - Uniform diffused lighting"
+    },
+    {
+      "id": "farmer_pwa_frontend",
+      "label": "Farmer React/Next.js PWA",
+      "type": "technology",
+      "description": "Progressive Web Application built with React/Next.js and TailwindCSS, featuring offline capabilities and multi-language i18n support.",
+      "importance": 0.59,
+      "level": 3,
+      "parent_id": "frontend_and_backend_architecture",
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_excerpt": "PWA for offline farmer access"
+    },
+    {
+      "id": "fastapi_backend_pipeline",
+      "label": "FastAPI & Celery Backend",
+      "type": "technology",
+      "description": "Asynchronous Python web server using Celery task queues, PostgreSQL database, and MinIO/S3 object storage for rapid image pipeline handling.",
+      "importance": 0.65,
+      "level": 3,
+      "parent_id": "frontend_and_backend_architecture",
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_excerpt": "FastAPI backend, image pipeline, database, auth"
+    },
+    {
+      "id": "yolov8_contaminant_detection",
+      "label": "YOLOv8 Contaminant Detection",
+      "type": "technology",
+      "description": "Ultralytics YOLOv8 real-time object detection model trained to identify foreign particles and contaminants in feed samples.",
+      "importance": 0.62,
+      "level": 3,
+      "parent_id": "ai_quality_grading_engine",
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_excerpt": "Train YOLOv8 for contaminant detection in feed"
+    },
+    {
+      "id": "efficientnet_quality_classifier",
+      "label": "EfficientNet Quality Classifier",
+      "type": "technology",
+      "description": "PyTorch EfficientNet neural network exported to ONNX format for categorizing feed quality into A, B, or C grades.",
+      "importance": 0.65,
+      "level": 3,
+      "parent_id": "ai_quality_grading_engine",
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "source_excerpt": "EfficientNet classifier for A/B/C grading, ONNX export"
+    },
+    {
+      "id": "icar_and_fao_feed_standards",
+      "label": "ICAR & FAO Feed Standards",
+      "type": "definition",
+      "description": "Quality parameters and composition guidelines published by ICAR India and UN FAO used for ground truth labeling.",
+      "importance": 0.5,
+      "level": 3,
+      "parent_id": "data_sources_and_standards",
+      "source_pages": [
+        6
+      ],
+      "source_excerpt": "Quality parameters and grading criteria"
+    },
+    {
+      "id": "custom_image_dataset",
+      "label": "Self-Collected Custom Image Dataset",
+      "type": "concept",
+      "description": "Custom training dataset of 200 to 500 images per quality class captured directly inside the hardware prototype box.",
+      "importance": 0.56,
+      "level": 3,
+      "parent_id": "data_sources_and_standards",
+      "source_pages": [
+        6
+      ],
+      "source_excerpt": "200-500 images per class from HW box"
+    },
+    {
+      "id": "hardware_and_data_phase",
+      "label": "Hardware Build & Data Collection Phase",
+      "type": "process",
+      "description": "Days 1-2 focused on assembling the inspection box enclosure and capturing 500+ baseline sample images.",
+      "importance": 0.5,
+      "level": 3,
+      "parent_id": "eight_day_sprint_plan",
+      "source_pages": [
+        6
+      ],
+      "source_excerpt": "Build HW box, capture 500+ training images"
+    },
+    {
+      "id": "integration_and_pipeline_phase",
+      "label": "Integration & Optimization Phase",
+      "type": "process",
+      "description": "Days 6-7 focused on linking capture, AI classification, and automated reporting end-to-end.",
+      "importance": 0.5,
+      "level": 3,
+      "parent_id": "eight_day_sprint_plan",
+      "source_pages": [
+        6
+      ],
+      "source_excerpt": "Capture -> Classify -> Report pipeline"
+    },
+    {
+      "id": "lighting_and_data_mitigations",
+      "label": "Lighting & Data Scarcity Mitigations",
+      "type": "method",
+      "description": "Enclosed hardware box design to solve lighting inconsistency, supplemented by transfer learning and data augmentation.",
+      "importance": 0.5,
+      "level": 3,
+      "parent_id": "project_risks_and_mitigations",
+      "source_pages": [
+        6
+      ],
+      "source_excerpt": "Controlled lighting inside custom hardware box"
+    },
+    {
+      "id": "live_hardware_demo_strategy",
+      "label": "Live Prototype Demonstration Strategy",
+      "type": "process",
+      "description": "30-second problem introduction video followed by live hardware scan streaming data directly to the judge-facing dashboard.",
+      "importance": 0.51,
+      "level": 3,
+      "parent_id": "demonstration_and_pitch_plan",
+      "source_pages": [
+        7
+      ],
+      "source_excerpt": "Live demo the hardware prototype (judges love tangible solutions)"
+    }
+  ],
+  "edges": [
+    {
+      "source": "sih26111_feed_and_silage_testing_system",
+      "target": "proposal_overview_and_evaluation",
+      "relationship": "contains_topic",
+      "confidence": 1.0,
+      "is_hierarchical": true,
+      "source_pages": [
+        1,
+        2
+      ]
+    },
+    {
+      "source": "sih26111_feed_and_silage_testing_system",
+      "target": "team_structure_and_roles",
+      "relationship": "contains_topic",
+      "confidence": 1.0,
+      "is_hierarchical": true,
+      "source_pages": [
+        1,
+        3
+      ]
+    },
+    {
+      "source": "sih26111_feed_and_silage_testing_system",
+      "target": "hardware_architecture_and_bom",
+      "relationship": "contains_topic",
+      "confidence": 1.0,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "source": "sih26111_feed_and_silage_testing_system",
+      "target": "software_and_ai_stack",
+      "relationship": "contains_topic",
+      "confidence": 1.0,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "source": "sih26111_feed_and_silage_testing_system",
+      "target": "datasets_and_training_data",
+      "relationship": "contains_topic",
+      "confidence": 1.0,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "source": "sih26111_feed_and_silage_testing_system",
+      "target": "implementation_roadmap_and_timeline",
+      "relationship": "contains_topic",
+      "confidence": 1.0,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "source": "sih26111_feed_and_silage_testing_system",
+      "target": "risk_assessment_and_mitigation",
+      "relationship": "contains_topic",
+      "confidence": 1.0,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "source": "sih26111_feed_and_silage_testing_system",
+      "target": "presentation_and_pitch_strategy",
+      "relationship": "contains_topic",
+      "confidence": 1.0,
+      "is_hierarchical": true,
+      "source_pages": [
+        7
+      ]
+    },
+    {
+      "source": "proposal_overview_and_evaluation",
+      "target": "evaluation_and_win_metrics",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "source": "evaluation_and_win_metrics",
+      "target": "problem_evaluation_criteria",
+      "relationship": "includes",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "source": "evaluation_and_win_metrics",
+      "target": "plug_and_play_usp",
+      "relationship": "includes",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "source": "team_structure_and_roles",
+      "target": "team_role_distribution",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "source": "team_role_distribution",
+      "target": "web_development_team",
+      "relationship": "includes",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "source": "team_role_distribution",
+      "target": "aiml_development_team",
+      "relationship": "includes",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "source": "team_role_distribution",
+      "target": "hardware_engineering_team",
+      "relationship": "includes",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "source": "hardware_architecture_and_bom",
+      "target": "hardware_components_and_cost",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "source": "hardware_components_and_cost",
+      "target": "esp32_cam_module",
+      "relationship": "includes",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "source": "hardware_components_and_cost",
+      "target": "custom_inspection_box",
+      "relationship": "includes",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "source": "hardware_components_and_cost",
+      "target": "ws2812b_led_strip",
+      "relationship": "includes",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "source": "software_and_ai_stack",
+      "target": "frontend_and_backend_architecture",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        4
+      ]
+    },
+    {
+      "source": "software_and_ai_stack",
+      "target": "ai_quality_grading_engine",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        4
+      ]
+    },
+    {
+      "source": "frontend_and_backend_architecture",
+      "target": "farmer_pwa_frontend",
+      "relationship": "includes",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4
+      ]
+    },
+    {
+      "source": "frontend_and_backend_architecture",
+      "target": "fastapi_backend_pipeline",
+      "relationship": "includes",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4
+      ]
+    },
+    {
+      "source": "ai_quality_grading_engine",
+      "target": "yolov8_contaminant_detection",
+      "relationship": "includes",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4
+      ]
+    },
+    {
+      "source": "ai_quality_grading_engine",
+      "target": "efficientnet_quality_classifier",
+      "relationship": "includes",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        3,
+        4
+      ]
+    },
+    {
+      "source": "datasets_and_training_data",
+      "target": "data_sources_and_standards",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "source": "data_sources_and_standards",
+      "target": "icar_and_fao_feed_standards",
+      "relationship": "includes",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "source": "data_sources_and_standards",
+      "target": "custom_image_dataset",
+      "relationship": "includes",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "source": "implementation_roadmap_and_timeline",
+      "target": "eight_day_sprint_plan",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "source": "eight_day_sprint_plan",
+      "target": "hardware_and_data_phase",
+      "relationship": "includes",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "source": "eight_day_sprint_plan",
+      "target": "integration_and_pipeline_phase",
+      "relationship": "includes",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "source": "risk_assessment_and_mitigation",
+      "target": "project_risks_and_mitigations",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "source": "project_risks_and_mitigations",
+      "target": "lighting_and_data_mitigations",
+      "relationship": "includes",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "source": "presentation_and_pitch_strategy",
+      "target": "demonstration_and_pitch_plan",
+      "relationship": "consists_of",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        7
+      ]
+    },
+    {
+      "source": "demonstration_and_pitch_plan",
+      "target": "live_hardware_demo_strategy",
+      "relationship": "includes",
+      "confidence": 0.95,
+      "is_hierarchical": true,
+      "source_pages": [
+        7
+      ]
+    },
+    {
+      "source": "esp32_cam_module",
+      "target": "fastapi_backend_pipeline",
+      "relationship": "produces",
+      "confidence": 0.9,
+      "is_hierarchical": false,
+      "source_pages": [
+        4,
+        5
+      ]
+    },
+    {
+      "source": "fastapi_backend_pipeline",
+      "target": "yolov8_contaminant_detection",
+      "relationship": "uses",
+      "confidence": 0.9,
+      "is_hierarchical": false,
+      "source_pages": [
+        4,
+        5
+      ]
+    },
+    {
+      "source": "fastapi_backend_pipeline",
+      "target": "efficientnet_quality_classifier",
+      "relationship": "uses",
+      "confidence": 0.9,
+      "is_hierarchical": false,
+      "source_pages": [
+        4,
+        5
+      ]
+    },
+    {
+      "source": "fastapi_backend_pipeline",
+      "target": "farmer_pwa_frontend",
+      "relationship": "produces",
+      "confidence": 0.9,
+      "is_hierarchical": false,
+      "source_pages": [
+        4,
+        5
+      ]
+    },
+    {
+      "source": "custom_inspection_box",
+      "target": "esp32_cam_module",
+      "relationship": "contains_topic",
+      "confidence": 0.95,
+      "is_hierarchical": false,
+      "source_pages": [
+        3,
+        4
+      ]
+    },
+    {
+      "source": "custom_inspection_box",
+      "target": "ws2812b_led_strip",
+      "relationship": "contains_topic",
+      "confidence": 0.95,
+      "is_hierarchical": false,
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "source": "lighting_and_data_mitigations",
+      "target": "custom_inspection_box",
+      "relationship": "implemented_by",
+      "confidence": 0.85,
+      "is_hierarchical": false,
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "source": "custom_image_dataset",
+      "target": "yolov8_contaminant_detection",
+      "relationship": "used_by",
+      "confidence": 0.9,
+      "is_hierarchical": false,
+      "source_pages": [
+        3,
+        6
+      ]
+    },
+    {
+      "source": "custom_image_dataset",
+      "target": "efficientnet_quality_classifier",
+      "relationship": "used_by",
+      "confidence": 0.9,
+      "is_hierarchical": false,
+      "source_pages": [
+        3,
+        6
+      ]
+    },
+    {
+      "source": "icar_and_fao_feed_standards",
+      "target": "efficientnet_quality_classifier",
+      "relationship": "depends_on",
+      "confidence": 0.85,
+      "is_hierarchical": false,
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "source": "hardware_engineering_team",
+      "target": "esp32_cam_module",
+      "relationship": "implemented_by",
+      "confidence": 0.9,
+      "is_hierarchical": false,
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "source": "hardware_engineering_team",
+      "target": "custom_inspection_box",
+      "relationship": "implemented_by",
+      "confidence": 0.9,
+      "is_hierarchical": false,
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "source": "aiml_development_team",
+      "target": "yolov8_contaminant_detection",
+      "relationship": "implemented_by",
+      "confidence": 0.9,
+      "is_hierarchical": false,
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "source": "aiml_development_team",
+      "target": "efficientnet_quality_classifier",
+      "relationship": "implemented_by",
+      "confidence": 0.9,
+      "is_hierarchical": false,
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "source": "web_development_team",
+      "target": "farmer_pwa_frontend",
+      "relationship": "implemented_by",
+      "confidence": 0.9,
+      "is_hierarchical": false,
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "source": "web_development_team",
+      "target": "fastapi_backend_pipeline",
+      "relationship": "implemented_by",
+      "confidence": 0.9,
+      "is_hierarchical": false,
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "source": "live_hardware_demo_strategy",
+      "target": "esp32_cam_module",
+      "relationship": "uses",
+      "confidence": 0.85,
+      "is_hierarchical": false,
+      "source_pages": [
+        7
+      ]
+    },
+    {
+      "source": "live_hardware_demo_strategy",
+      "target": "farmer_pwa_frontend",
+      "relationship": "uses",
+      "confidence": 0.85,
+      "is_hierarchical": false,
+      "source_pages": [
+        7
+      ]
+    },
+    {
+      "source": "hardware_and_data_phase",
+      "target": "custom_inspection_box",
+      "relationship": "produces",
+      "confidence": 0.85,
+      "is_hierarchical": false,
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "source": "hardware_and_data_phase",
+      "target": "custom_image_dataset",
+      "relationship": "produces",
+      "confidence": 0.85,
+      "is_hierarchical": false,
+      "source_pages": [
+        6
+      ]
+    }
+  ],
+  "levels_available": [
+    0,
+    1,
+    2,
+    3
+  ]
+}

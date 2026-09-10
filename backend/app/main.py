@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api import upload, process, embedding, search, retrieve, chat, auth, documents, history
+from app.api import upload, process, embedding, search, retrieve, chat, auth, documents, history, graph
 
 app = FastAPI(
     title="DocuMind AI"
@@ -23,6 +23,7 @@ app.include_router(search.router)
 app.include_router(retrieve.router)
 app.include_router(chat.router)
 app.include_router(history.router)
+app.include_router(graph.router)
 
 @app.get("/")
 def root():

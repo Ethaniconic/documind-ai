@@ -32,7 +32,7 @@ const UploadBox = ({ onFileSelect, onError }) => {
       className={`relative border-2 border-dashed p-6 text-center cursor-pointer transition-all ${
         isDrag
           ? "border-indigo-400 bg-indigo-950/40"
-          : "border-slate-700/80 bg-[#0d1424] hover:border-indigo-500/80 hover:bg-[#0f172a]"
+          : "border-subtle/80 bg-surface hover:border-indigo-500/80 hover:bg-surface"
       }`}
     >
       {/* Corner crosshairs */}
@@ -55,16 +55,16 @@ const UploadBox = ({ onFileSelect, onError }) => {
         </svg>
       </div>
 
-      <h3 className="text-base md:text-lg font-bold text-slate-100 tracking-wide uppercase font-mono">
+      <h3 className="text-base md:text-lg font-bold text-foreground tracking-wide uppercase font-mono">
         Drop Document Here
       </h3>
-      <p className="text-sm text-slate-400 mt-1.5">or click to browse files</p>
+      <p className="text-sm text-muted mt-1.5">or click to browse files</p>
 
       <div className="flex items-center justify-center gap-3 mt-5 text-xs md:text-sm font-mono">
-        <span className="bg-slate-800 border-2 border-slate-700 text-indigo-300 px-3 py-1 font-bold shadow-[2px_2px_0px_0px_#1e293b]">
+        <span className="bg-surface-hover border-2 border-subtle text-indigo-300 px-3 py-1 font-bold shadow-[2px_2px_0px_0px_#1e293b]">
           FORMAT: PDF
         </span>
-        <span className="bg-slate-800 border-2 border-slate-700 text-slate-300 px-3 py-1 font-semibold shadow-[2px_2px_0px_0px_#1e293b]">
+        <span className="bg-surface-hover border-2 border-subtle text-foreground px-3 py-1 font-semibold shadow-[2px_2px_0px_0px_#1e293b]">
           MAX: 20 MB
         </span>
       </div>

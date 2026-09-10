@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "http://127.0.0.1:8000"
+    baseURL: import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000"
 });
 
 // Attach bearer token if stored
@@ -36,7 +36,15 @@ export const uploadDocument = async (file, userId) => {
 };
 
 export const getUserDocuments = async (userId) => {
-    const res = await api.get(`/documents/user/${userId}`);
+    const res = await api.get(`/documents/user/${encodeURIComponent(userId)}?t=${new Date().getTime()}`);
+    return res.data;
+};
+
+export const deleteDocument = async (documentId, userId = null) => {
+    const url = userId 
+        ? `/documents/${encodeURIComponent(documentId)}?user_id=${encodeURIComponent(userId)}`
+        : `/documents/${encodeURIComponent(documentId)}`;
+    const res = await api.delete(url);
     return res.data;
 };
 
@@ -47,12 +55,12 @@ export const createChat = async (userId) => {
 };
 
 export const getUserChats = async (userId) => {
-    const res = await api.get(`/chats/user/${userId}`);
+    const res = await api.get(`/chats/user/${userId}?t=${new Date().getTime()}`);
     return res.data;
 };
 
 export const getChatHistory = async (chatId) => {
-    const res = await api.get(`/chats/${chatId}`);
+    const res = await api.get(`/chats/${chatId}?t=${new Date().getTime()}`);
     return res.data;
 };
 
@@ -61,7 +69,18 @@ export const saveChatMessage = async (chatId, role, content) => {
     return res.data;
 };
 
+export const renameChat = async (chatId, title) => {
+    const res = await api.patch(`/chats/${chatId}`, { title });
+    return res.data;
+};
+
+export const deleteChat = async (chatId) => {
+    const res = await api.delete(`/chats/${chatId}`);
+    return res.data;
+};
+
 // RAG & Processing
+
 export const uploadFile = async (file) => {
     const formData = new FormData();
     formData.append("file", file);
@@ -91,8 +110,33 @@ export const retrieveDocuments = async (query, top_k = 5) => {
     return res.data;
 };
 
-export const chatDocuments = async (query, document_id = null, chat_id = null) => {
-    const res = await api.post("/chat", { query, document_id, chat_id });
+export const chatDocuments = async (query, document_id = null, chat_id = null, user_id = null) => {
+    const res = await api.post("/chat", { query, document_id, chat_id, user_id });
+    return res.data;
+};
+
+// Knowledge Graph & Knowledge Tree
+export const getKnowledgeGraph = async (documentId, force = false, userId = null) => {
+    const params = new URLSearchParams();
+    if (force) params.append("force", "true");
+    if (userId) params.append("user_id", userId);
+    const qs = params.toString() ? `?${params.toString()}` : "";
+    const res = await api.get(`/graph/${documentId}${qs}`);
+    return res.data;
+};
+
+export const generateKnowledgeGraph = async (documentId) => {
+    const res = await api.post(`/graph/${documentId}/generate`);
+    return res.data;
+};
+
+export const getNodeDetails = async (documentId, nodeId) => {
+    const res = await api.get(`/graph/${documentId}/node/${nodeId}`);
+    return res.data;
+};
+
+export const getGraphPath = async (documentId, source, target) => {
+    const res = await api.get(`/graph/${documentId}/path?source=${encodeURIComponent(source)}&target=${encodeURIComponent(target)}`);
     return res.data;
 };
 

@@ -6,13 +6,13 @@ const ProgressBar = ({ progress = 0, indeterminate = false, label = "" }) => {
   return (
     <div className="w-full space-y-1.5 font-mono">
       {(label || !indeterminate) && (
-        <div className="flex items-center justify-between text-xs text-slate-300">
+        <div className="flex items-center justify-between text-xs text-foreground">
           <span className="font-semibold uppercase tracking-wider text-[11px]">{label}</span>
           {!indeterminate && <span className="text-indigo-400 font-bold">{Math.round(clamped)}%</span>}
         </div>
       )}
 
-      <div className="h-3 w-full bg-slate-900 border-2 border-slate-700 p-0.5 relative overflow-hidden">
+      <div className="h-3 w-full bg-surface border-2 border-subtle p-0.5 relative overflow-hidden">
         {indeterminate ? (
           <div className="h-full w-2/5 bg-indigo-500 animate-[indeterminate_1.2s_infinite_linear]" />
         ) : (
