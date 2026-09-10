@@ -1,7 +1,8 @@
 import axios from "axios";
 
+const rawBaseUrl = import.meta.env.VITE_API_BASE_URL || import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 const api = axios.create({
-    baseURL: import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000"
+    baseURL: rawBaseUrl.replace(/\/+$/, "")
 });
 
 // Attach bearer token if stored
@@ -55,7 +56,7 @@ export const createChat = async (userId) => {
 };
 
 export const getUserChats = async (userId) => {
-    const res = await api.get(`/chats/user/${userId}?t=${new Date().getTime()}`);
+    const res = await api.get(`/chats/user/${encodeURIComponent(userId)}?t=${new Date().getTime()}`);
     return res.data;
 };
 

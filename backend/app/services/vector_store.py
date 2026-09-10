@@ -71,17 +71,17 @@ class VectorStore:
     def _download_from_supabase(self):
         VECTOR_STORE.mkdir(parents=True, exist_ok=True)
         try:
-            idx_bytes = supabase.storage.from_(settings.SUPABASE_BUCKET).download("vector_store/index.faiss")
-            if idx_bytes:
-                with open(INDEX_PATH, "wb") as f:
-                    f.write(idx_bytes)
-        except Exception:
-            pass
-
-        try:
-            meta_bytes = supabase.storage.from_(settings.SUPABASE_BUCKET).download("vector_store/metadata.json")
-            if meta_bytes:
-                with open(METADATA_PATH, "wb") as f:
-                    f.write(meta_bytes)
-        except Exception:
-            pass
+            items = supabase.storage.from_(settings.SUPABASE_BUCKET).list("vector_store")
+            names = {f.get("name") for f in items if isinstance(f, dict)}
+            if "index.faiss" in names:
+                idx_bytes = supabase.storage.from_(settings.SUPABASE_BUCKET).download("vector_store/index.faiss")
+                if idx_bytes:
+                    with open(INDEX_PATH, "wb") as f:
+                        f.write(idx_bytes)
+            if "metadata.json" in names:
+                meta_bytes = supabase.storage.from_(settings.SUPABASE_BUCKET).download("vector_store/metadata.json")
+                if meta_bytes:
+                    with open(METADATA_PATH, "wb") as f:
+                        f.write(meta_bytes)
+        except Exception as e:
+            print(f"[VectorStore] Storage download note: {e}")

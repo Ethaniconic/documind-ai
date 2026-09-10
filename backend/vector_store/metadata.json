@@ -1,0 +1,130 @@
+[
+    {
+        "document_id": "96edf831-da03-43d8-ac4f-84e589956b2c",
+        "chunk_id": "96edf831-da03-43d8-ac4f-84e589956b2c_chunk_1",
+        "page_number": 1,
+        "text": "SIH 2026 Smart India Hackathon - Proposal Report SIH26111 Smart AI-Enabled Rapid Feed and Silage Quality Testing System Organization: Ministry of Fisheries, Animal Husbandry & Dairying Category: Software Theme: Agriculture, FoodTech & Rural Development Registrations: 0 / 500 Deadline: 30 September 2026 Team Size: 6 (2 Web + 2 AI/ML + 2 Hardware) SIH 2026 Team Proposal /7",
+        "start_char": 0,
+        "end_char": 373
+    },
+    {
+        "document_id": "96edf831-da03-43d8-ac4f-84e589956b2c",
+        "chunk_id": "96edf831-da03-43d8-ac4f-84e589956b2c_chunk_2",
+        "page_number": 2,
+        "text": "SIH26111 | SIH 2026 Proposal 1. Rankings & Scores (out of 5) Each problem statement is evaluated on 5 key criteria relevant to your team's strengths and hackathon success: Data Availability: [*][*][*][*][ ] (4/5) Implementation Feasibility: [*][*][*][*][*] (5/5) Hardware Affordability: [*][*][*][*][*] (5/5) Presentation Impact: [*][*][*][*][*] (5/5) Win Probability: [*][*][*][*][*] (5/5) OVERALL SCORE: 4.8 / 5 2. Problem Statement Description Problem statement SIH26111 from Ministry of Fisheries",
+        "start_char": 0,
+        "end_char": 500
+    },
+    {
+        "document_id": "96edf831-da03-43d8-ac4f-84e589956b2c",
+        "chunk_id": "96edf831-da03-43d8-ac4f-84e589956b2c_chunk_3",
+        "page_number": 2,
+        "text": "CORE: 4.8 / 5 2. Problem Statement Description Problem statement SIH26111 from Ministry of Fisheries, Animal Husbandry & Dairying under Agriculture, FoodTech & Rural Development. 3. Unique Selling Proposition (USP) Complete plug-and-play solution under INR 1500. The custom imaging box ensures lab-grade consistency at field-level cost, producing standardized quality certificates for procurement agencies. Current Registrations: 0 / 500 -- Extremely low competition! SIH 2026 Team Proposal /7",
+        "start_char": 400,
+        "end_char": 893
+    },
+    {
+        "document_id": "96edf831-da03-43d8-ac4f-84e589956b2c",
+        "chunk_id": "96edf831-da03-43d8-ac4f-84e589956b2c_chunk_4",
+        "page_number": 3,
+        "text": "SIH26111 | SIH 2026 Proposal 4. Team Distribution (6 Members) Role assignments for balanced workload across all 6 members: Role Responsibility Key Skills Web Dev 1 Farmer PWA with image upload, results, scan history React, PWA, i18n Web Dev 2 FastAPI backend, image pipeline, database, auth Python, FastAPI, PostgreSQL AI/ML 1 Train YOLOv8 for contaminant detection in feed Python, Ultralytics, OpenCV AI/ML 2 EfficientNet classifier for A/B/C grading, ONNX export PyTorch, ONNX HW Eng 1 ESP32-CAM fi",
+        "start_char": 0,
+        "end_char": 500
+    },
+    {
+        "document_id": "96edf831-da03-43d8-ac4f-84e589956b2c",
+        "chunk_id": "96edf831-da03-43d8-ac4f-84e589956b2c_chunk_5",
+        "page_number": 3,
+        "text": "V AI/ML 2 EfficientNet classifier for A/B/C grading, ONNX export PyTorch, ONNX HW Eng 1 ESP32-CAM firmware: auto-capture, WiFi upload, LED ctrl C++, Arduino, REST HW Eng 2 Build inspection box, optimize lighting, 3D print tray CAD, Soldering 5. Hardware Bill of Materials (Total: INR 1,500) All components available on Amazon India, Robu.in, or local electronics stores: Component Qty Cost Purpose ESP32-CAM (OV2640 2MP) 1 INR 450 Camera with WiFi for image capture Custom MDF/Acrylic Inspection Box ",
+        "start_char": 400,
+        "end_char": 900
+    },
+    {
+        "document_id": "96edf831-da03-43d8-ac4f-84e589956b2c",
+        "chunk_id": "96edf831-da03-43d8-ac4f-84e589956b2c_chunk_6",
+        "page_number": 3,
+        "text": "P32-CAM (OV2640 2MP) 1 INR 450 Camera with WiFi for image capture Custom MDF/Acrylic Inspection Box 1 INR 300 Controlled environment for consistent shots WS2812B White LED Strip (30cm) 2 INR 150 Uniform diffused lighting (INR 75 each) 5V 2A USB Power Supply 1 INR 200 Stable power for ESP32 + LEDs 3D Printed Sample Tray 1 INR 150 Standardized sample positioning Misc (Wires, Diffuser, USB cable) 1 INR 250 Light diffuser sheet, connectors Cost Summary Hardware Cost: INR 1,500 Software/Cloud Cost: I",
+        "start_char": 800,
+        "end_char": 1300
+    },
+    {
+        "document_id": "96edf831-da03-43d8-ac4f-84e589956b2c",
+        "chunk_id": "96edf831-da03-43d8-ac4f-84e589956b2c_chunk_7",
+        "page_number": 3,
+        "text": "NR 250 Light diffuser sheet, connectors Cost Summary Hardware Cost: INR 1,500 Software/Cloud Cost: INR 0 (open-source + free tiers) Total Project Cost: INR 1,500 Budget Remaining: INR 2500 (out of INR 4,000) SIH 2026 Team Proposal /7",
+        "start_char": 1200,
+        "end_char": 1433
+    },
+    {
+        "document_id": "96edf831-da03-43d8-ac4f-84e589956b2c",
+        "chunk_id": "96edf831-da03-43d8-ac4f-84e589956b2c_chunk_8",
+        "page_number": 4,
+        "text": "SIH26111 | SIH 2026 Proposal 6. Technology Stack Frontend > React.js / Next.js > TailwindCSS > PWA for offline farmer access > i18n (Hindi, regional) Backend > Python FastAPI > Celery (async image queue) > PostgreSQL > MinIO / S3 (image store) AI/ML > YOLOv8 (foreign particle detection) > EfficientNet / ResNet-50 (quality grading) > OpenCV (color histogram, preprocessing) > ONNX Runtime (edge deploy) Hardware > ESP32-CAM (Arduino/PlatformIO) > REST API image upload > LED PWM brightness control D",
+        "start_char": 0,
+        "end_char": 500
+    },
+    {
+        "document_id": "96edf831-da03-43d8-ac4f-84e589956b2c",
+        "chunk_id": "96edf831-da03-43d8-ac4f-84e589956b2c_chunk_9",
+        "page_number": 4,
+        "text": "oy) Hardware > ESP32-CAM (Arduino/PlatformIO) > REST API image upload > LED PWM brightness control DevOps > Docker, Gunicorn > AWS Lambda / Cloud Run 7. System Architecture Diagram Complete data flow from hardware sensors through backend to user-facing applications: +-------------------------+ +---------------------+ | Feed Sample in HW Box | | | | +------------------+ | | FastAPI Backend | | | ESP32-CAM |---+--WiFi--> (Image Pipeline) | SIH 2026 Team Proposal /7",
+        "start_char": 400,
+        "end_char": 867
+    },
+    {
+        "document_id": "96edf831-da03-43d8-ac4f-84e589956b2c",
+        "chunk_id": "96edf831-da03-43d8-ac4f-84e589956b2c_chunk_10",
+        "page_number": 5,
+        "text": "SIH26111 | SIH 2026 Proposal | +------------------+ | | | | | LED Lighting | | +----------+----------+ +-------------------------+ | +----------v----------+ | YOLO + EfficientNet | | (Quality Grading) | +----------+----------+ | +----------v----------+ | Farmer Web App | | (PWA + Reports) | +---------------------+ SIH 2026 Team Proposal /7",
+        "start_char": 0,
+        "end_char": 341
+    },
+    {
+        "document_id": "96edf831-da03-43d8-ac4f-84e589956b2c",
+        "chunk_id": "96edf831-da03-43d8-ac4f-84e589956b2c_chunk_11",
+        "page_number": 6,
+        "text": "SIH26111 | SIH 2026 Proposal 8. Available Datasets for Model Training Publicly available datasets for training and validating AI/ML models: Dataset Source Description Access ImageNet Subset (Grains) Stanford/Google Pretrained weights for transfer learning Free ICAR Feed Standards ICAR India Quality parameters and grading criteria Govt Grain Quality Dataset Kaggle Labeled grain quality images Free Custom Training Data Self-collected 200-500 images per class from HW box Self FAO Feed Guidelines UN",
+        "start_char": 0,
+        "end_char": 500
+    },
+    {
+        "document_id": "96edf831-da03-43d8-ac4f-84e589956b2c",
+        "chunk_id": "96edf831-da03-43d8-ac4f-84e589956b2c_chunk_12",
+        "page_number": 6,
+        "text": "Custom Training Data Self-collected 200-500 images per class from HW box Self FAO Feed Guidelines UN FAO International feed composition standards Free 9. 8-Day Implementation Timeline Sprint plan from today until the presentation: Phase Focus Key Deliverables Day 1-2 Data Collection & Setup Build HW box, capture 500+ training images Day 3-5 Model Training & Web App Train YOLO + EfficientNet, build frontend/API Day 6-7 Integration & Optimization Capture -> Classify -> Report pipeline Day 8 Demo &",
+        "start_char": 400,
+        "end_char": 900
+    },
+    {
+        "document_id": "96edf831-da03-43d8-ac4f-84e589956b2c",
+        "chunk_id": "96edf831-da03-43d8-ac4f-84e589956b2c_chunk_13",
+        "page_number": 6,
+        "text": " frontend/API Day 6-7 Integration & Optimization Capture -> Classify -> Report pipeline Day 8 Demo & Documentation Live demo with real feed samples, pitch prep 10. Risk Assessment & Mitigation Risk Factor Severity Mitigation Strategy Inconsistent lighting Medium Controlled lighting inside custom hardware box Limited training data Medium Data augmentation + transfer learning Farmer digital literacy Low One-button capture, voice-guided instructions SIH 2026 Team Proposal /7",
+        "start_char": 800,
+        "end_char": 1276
+    },
+    {
+        "document_id": "96edf831-da03-43d8-ac4f-84e589956b2c",
+        "chunk_id": "96edf831-da03-43d8-ac4f-84e589956b2c_chunk_14",
+        "page_number": 7,
+        "text": "SIH26111 | SIH 2026 Proposal 11. Presentation Strategy Demo Approach > Start with a 30-second problem video showing real-world impact > Live demo the hardware prototype (judges love tangible solutions) > Show the dashboard with real data flowing from hardware > End with AI prediction results and accuracy metrics Recommended Slide Structure > Slide 1: Problem Statement & Impact Statistics > Slide 2: Proposed Solution Overview (architecture diagram) > Slide 3: Live Demo / Video Demo > Slide 4: Tec",
+        "start_char": 0,
+        "end_char": 500
+    },
+    {
+        "document_id": "96edf831-da03-43d8-ac4f-84e589956b2c",
+        "chunk_id": "96edf831-da03-43d8-ac4f-84e589956b2c_chunk_15",
+        "page_number": 7,
+        "text": ": Proposed Solution Overview (architecture diagram) > Slide 3: Live Demo / Video Demo > Slide 4: Tech Stack & Innovation Highlights > Slide 5: Hardware Prototype & Cost Breakdown > Slide 6: AI/ML Model Performance Metrics > Slide 7: Scalability & Future Roadmap > Slide 8: Team & Thank You Key Phrases to Use in Your Pitch > 'We solve Agriculture, FoodTech & Rural Development using a hybrid hardware-software approach' > 'Total prototype cost is just INR 1,500 -- deployable at scale' > 'Our AI mode",
+        "start_char": 400,
+        "end_char": 900
+    },
+    {
+        "document_id": "96edf831-da03-43d8-ac4f-84e589956b2c",
+        "chunk_id": "96edf831-da03-43d8-ac4f-84e589956b2c_chunk_16",
+        "page_number": 7,
+        "text": "-software approach' > 'Total prototype cost is just INR 1,500 -- deployable at scale' > 'Our AI model achieves over 90% accuracy on publicly available datasets' > 'Designed offline-first, critical for rural deployment' SIH 2026 Team Proposal /7",
+        "start_char": 800,
+        "end_char": 1044
+    }
+]

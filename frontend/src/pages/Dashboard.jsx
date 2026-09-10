@@ -115,22 +115,28 @@ export default function Dashboard() {
   const loadInitialData = async (userId) => {
     try {
       console.log("Loading initial data for user:", userId);
-      // Load user documents
-      const docs = await getUserDocuments(userId);
-      console.log("Docs received from API:", docs);
-      setDocuments(docs || []);
+      const [docsResult, chatsResult] = await Promise.allSettled([
+        getUserDocuments(userId),
+        getUserChats(userId)
+      ]);
 
-      // Load user chat threads
-      const userChats = await getUserChats(userId);
-      console.log("Chats received from API:", userChats);
-      setChats(userChats || []);
-
-      // Auto-select latest chat or prepare a fresh state
-      if (userChats && userChats.length > 0) {
-        selectChat(userChats[0].id);
+      if (docsResult.status === "fulfilled") {
+        setDocuments(docsResult.value || []);
       } else {
-        setActiveChatId(null);
-        setMessages([]);
+        console.error("Failed to load documents:", docsResult.reason);
+      }
+
+      if (chatsResult.status === "fulfilled") {
+        const userChats = chatsResult.value || [];
+        setChats(userChats);
+        if (userChats.length > 0) {
+          selectChat(userChats[0].id);
+        } else {
+          setActiveChatId(null);
+          setMessages([]);
+        }
+      } else {
+        console.error("Failed to load chats:", chatsResult.reason);
       }
     } catch (err) {
       console.error("Error loading dashboard data:", err);
