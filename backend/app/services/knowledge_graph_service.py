@@ -100,19 +100,20 @@ class KnowledgeGraphService:
             if cached:
                 return cached
 
+        # Validate API key is present
+        from app.core.config import settings
+        if not settings.GEMINI_API or not settings.GEMINI_API.strip():
+            raise ValueError(
+                "GEMINI_API key is not configured on the server. "
+                "Please set GEMINI_API in your Render environment variables."
+            )
+
         pages = self.get_document_pages(document_id)
         if not pages:
-            # If no raw text found, check if a pre-existing fallback graph exists
-            for p in GRAPH_DIR.glob("*.json"):
-                try:
-                    with open(p, "r", encoding="utf-8") as f:
-                        data = json.load(f)
-                        if data.get("nodes"):
-                            data["document"]["id"] = document_id
-                            return data
-                except Exception:
-                    pass
-            raise ValueError(f"No source text or PDF found for document ID: {document_id}")
+            raise ValueError(
+                f"No extractable text found for document '{document_id}'. "
+                "The PDF may be image-based (scanned). Please upload a text-based PDF."
+            )
 
         # Formulate comprehensive prompt for Gemini
         doc_text_parts = []
@@ -171,19 +172,29 @@ Respond ONLY with valid JSON matching this structure:
 }}
 """
         response_text = self.llm.generate(prompt, max_new_tokens=4096)
+        print(f"[KnowledgeGraphService] LLM response length: {len(response_text)} chars")
+
+        # Check for LLM error / fallback message
+        if not response_text or "momentarily" in response_text or "try again" in response_text.lower():
+            raise ValueError(
+                f"Gemini API did not return a valid graph. Response: {response_text[:200]}"
+            )
+
         cleaned_json = re.sub(r"^```(?:json)?", "", response_text.strip(), flags=re.MULTILINE)
         cleaned_json = re.sub(r"```$", "", cleaned_json.strip(), flags=re.MULTILINE).strip()
 
         try:
             graph_data = json.loads(cleaned_json)
         except Exception as e:
-            # Attempt to locate first { and last }
             start = cleaned_json.find("{")
             end = cleaned_json.rfind("}")
             if start != -1 and end != -1:
-                graph_data = json.loads(cleaned_json[start : end + 1])
+                try:
+                    graph_data = json.loads(cleaned_json[start : end + 1])
+                except Exception as e2:
+                    raise ValueError(f"Failed to parse LLM graph output: {e2}\nRaw snippet: {response_text[:400]}")
             else:
-                raise ValueError(f"Failed to parse LLM graph output: {e}\nRaw: {response_text[:300]}")
+                raise ValueError(f"LLM returned non-JSON output: {e}\nRaw snippet: {response_text[:400]}")
 
         # Post-process with NetworkX
         processed_graph = self._refine_graph_with_networkx(graph_data, document_id)

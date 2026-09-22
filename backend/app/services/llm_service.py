@@ -22,12 +22,16 @@ class LLMService:
         client = get_client()
         models = [settings.GEMINI_MODEL] + [m for m in FALLBACK_MODELS if m != settings.GEMINI_MODEL]
 
+        last_error = None
         for model in models:
             try:
                 response = client.models.generate_content(model=model, contents=prompt)
                 if response and response.text:
                     return response.text.strip()
-            except Exception:
+            except Exception as e:
+                last_error = e
+                print(f"[LLMService] Model {model} failed: {e}")
                 continue
 
+        print(f"[LLMService] All models failed. Last error: {last_error}")
         return "The AI assistant is momentarily handling high traffic. Please try again in a few seconds."
