@@ -1,3 +1,4 @@
+import json
 from fastapi import APIRouter
 from app.models.chat import ChatRequest, ChatResponse
 from app.services.chat_service import ChatService
@@ -26,19 +27,15 @@ def chat(request: ChatRequest):
 
     result = chat_service.chat(request.query, request.document_id, request.user_id)
 
-    # Automatically persist conversation flow: User message -> AI response -> PostgreSQL
     if request.chat_id:
         try:
-            import json
             history = ChatHistoryService()
             history.save_message(request.chat_id, "user", request.query)
-
             content_to_save = result["answer"]
             if result.get("sources"):
                 content_to_save += f"\n\n<!-- SOURCES:{json.dumps(result['sources'])} -->"
             history.save_message(request.chat_id, "assistant", content_to_save)
         except Exception as e:
-            print(f"Error saving chat message to database: {e}")
-
+            print(f"Error saving chat message: {e}")
 
     return result

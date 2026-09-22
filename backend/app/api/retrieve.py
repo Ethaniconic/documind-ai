@@ -6,25 +6,21 @@ from app.services.vector_store import VectorStore
 
 router = APIRouter()
 
+
 @router.post("/retrieve")
 def retrieve(request: SearchRequest):
     embed_service = EmbeddingService()
     vector_store = VectorStore(dimension=384)
-    
+
     try:
         vector_store.load()
     except FileNotFoundError:
-        return {
-            "query": request.query,
-            "candidates": [],
-            "results": [],
-            "context": ""
-        }
+        return {"query": request.query, "results": [], "context": ""}
 
     retriever = Retriever(embed_service, vector_store)
     raw_results = retriever.retrieve(request.query, top_k=request.top_k or 10)
 
-    candidates = [
+    results = [
         {
             "score": round(chunk.score, 4),
             "chunk_id": chunk.chunk_id,
@@ -34,11 +30,6 @@ def retrieve(request: SearchRequest):
         }
         for chunk in raw_results
     ]
-    context = "\n\n".join([f"Page {c['page_number']}:\n{c['text']}" for c in candidates if c['text']])
+    context = "\n\n".join([f"Page {r['page_number']}:\n{r['text']}" for r in results if r["text"]])
 
-    return {
-        "query": request.query,
-        "candidates": candidates,
-        "results": candidates,
-        "context": context
-    }
+    return {"query": request.query, "results": results, "context": context}

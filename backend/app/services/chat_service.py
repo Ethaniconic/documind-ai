@@ -1,4 +1,4 @@
-from app.services.reranker import filter_results, remove_duplicates, build_context
+from app.services.reranker import remove_duplicates, build_context
 
 PROMPT_TEMPLATE = """You are DocuMind AI, an intelligent document analysis assistant.
 
@@ -33,21 +33,16 @@ class ChatService:
                     "sources": [],
                 }
 
-        # 1. Retrieve candidate chunks
         raw_chunks = self.retriever.retrieve(query, top_k=10)
 
-        # 2. Filter strictly by user's owned documents and selected document_id
         filtered_chunks = []
         for chunk in raw_chunks:
             chunk_doc = str(getattr(chunk, "document_id", "") or "")
-            
-            # Tenant isolation: ensure chunk belongs to this user's documents
+
             if allowed_doc_ids is not None:
-                matches_user = any(allowed in chunk_doc or chunk_doc in allowed for allowed in allowed_doc_ids)
-                if not matches_user:
+                if not any(allowed in chunk_doc or chunk_doc in allowed for allowed in allowed_doc_ids):
                     continue
 
-            # Focus filter: if specific document is selected
             if document_id:
                 doc_str = str(document_id)
                 if doc_str not in chunk_doc and chunk_doc not in doc_str:
@@ -55,7 +50,6 @@ class ChatService:
 
             filtered_chunks.append(chunk)
 
-        # 3. Build context
         unique_chunks = remove_duplicates(filtered_chunks[:5])
 
         if not unique_chunks:
@@ -65,14 +59,9 @@ class ChatService:
             }
 
         context = build_context(unique_chunks)
-
-        # 4. Build prompt
         prompt = PROMPT_TEMPLATE.format(context=context, question=query)
-
-        # 5. Send prompt to LLM
         answer = self.llm.generate(prompt)
 
-        # 6. Extract sources
         sources = [
             {
                 "document_id": chunk.document_id,
@@ -82,7 +71,4 @@ class ChatService:
             for chunk in unique_chunks
         ]
 
-        return {
-            "answer": answer,
-            "sources": sources,
-        }
+        return {"answer": answer, "sources": sources}

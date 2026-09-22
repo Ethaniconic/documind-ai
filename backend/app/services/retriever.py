@@ -1,9 +1,8 @@
-# pyrefly: ignore [missing-import]
-import faiss
 import numpy as np
 from app.models.retrieval import RetrievedChunk
 from app.services.embedding_service import EmbeddingService
 from app.services.vector_store import VectorStore
+
 
 class Retriever:
     def __init__(self, embedding_service: EmbeddingService, vector_store: VectorStore):
@@ -12,15 +11,9 @@ class Retriever:
 
     def retrieve(self, query, top_k=10):
         query_vector = self.embedding_service.embed_text(query)
-        print("Query embedding shape:", query_vector.shape)
-        print("Query embedding norm:", np.linalg.norm(query_vector))
-
         distances, indices = self.vector_store.search(query_vector, top_k=top_k)
-        scores = distances[0].tolist()
-        print("Top scores:", scores)
 
         retrieved_chunks = []
-
         for idx, score in zip(indices[0], distances[0]):
             if idx == -1:
                 continue
